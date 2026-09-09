@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WARDROBE - Onboarding Screen 03</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: #EFECE6;
+      font-family: 'Inter', -apple-system, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 24px 16px 40px 16px;
+      color: #1A1715;
+    }
+
+    .preview-header {
+      margin-bottom: 16px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .preview-header h1 {
+      font-family: 'Bodoni Moda', serif;
+      font-size: 24px;
+      font-weight: 400;
+      letter-spacing: -0.5px;
+      margin-bottom: 4px;
+    }
+
+    .preview-header p {
+      font-size: 13px;
+      color: #78716C;
+    }
+
+    .controls-bar {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: 10px;
+    }
+
+    .pill-group {
+      display: inline-flex;
+      background: #E5E0D6;
+      border-radius: 9999px;
+      padding: 3px;
+      gap: 3px;
+    }
+
+    .toggle-btn {
+      border: none;
+      background: transparent;
+      padding: 6px 14px;
+      border-radius: 9999px;
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      font-weight: 500;
+      color: #78716C;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .toggle-btn.active {
+      background: #FFFFFF;
+      color: #1A1715;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    }
+
+    /* Scaling Wrapper so phone fits completely on laptops */
+    .frame-scaler {
+      transform-origin: top center;
+      transition: transform 0.25s ease;
+      transform: scale(0.85); /* 85% default so 844px fits on laptop screens */
+      margin-bottom: -90px;
+    }
+
+    /* Target Device: 390 x 844 px (Android Mobile) */
+    .device-frame {
+      width: 390px;
+      height: 844px;
+      background: #FBF9F5;
+      border-radius: 46px;
+      box-shadow:
+        0 25px 60px -12px rgba(26, 23, 21, 0.25),
+        0 0 0 12px #1A1715,
+        0 0 0 14px #332F2B;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Inner scrollable area */
+    .device-scroll {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      overflow-y: auto;
+      overflow-x: hidden;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+    .device-scroll::-webkit-scrollbar {
+      display: none;
+    }
+
+    /* Hero Background Image - Woman positioned directly between the 4 cards */
+    .hero-bg {
+      position: absolute;
+      top: -108px;
+      left: 0;
+      width: 100%;
+      height: calc(100% + 115px);
+      object-fit: cover;
+      object-position: top center;
+      z-index: 1;
+    }
+
+    /* Atmospheric Gradients */
+    .top-scrim {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 100px;
+      background: linear-gradient(180deg, rgba(251, 249, 245, 0.40) 0%, rgba(251, 249, 245, 0.15) 60%, transparent 100%);
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    .bottom-fade {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 320px;
+      background: linear-gradient(180deg, transparent 0%, rgba(251, 249, 245, 0.35) 25%, rgba(251, 249, 245, 0.85) 65%, #FBF9F5 100%);
+      z-index: 4;
+      pointer-events: none;
+    }
+
+    /* SVG Curved Connector Lines Layer */
+    .connector-svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 3;
+      pointer-events: none;
+    }
+
+    /* Occasion Cards Layer */
+    .occasion-cards-layer {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 4;
+      pointer-events: auto;
+    }
+
+    .occasion-card {
+      position: absolute;
+      width: 106px;
+      background: rgba(255, 255, 255, 0.68);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.92);
+      border-radius: 16px;
+      padding: 6px;
+      box-shadow: 0 8px 24px -4px rgba(140, 130, 120, 0.14), 0 2px 6px -1px rgba(140, 130, 120, 0.08);
+      cursor: pointer;
+      transition: transform 0.2s cubic-bezier(0.2, 0, 0, 1), box-shadow 0.2s ease;
+    }
+
+    .occasion-card:hover {
+      transform: translateY(-2px) scale(1.02);
+      box-shadow: 0 12px 28px -4px rgba(140, 130, 120, 0.22);
+    }
+
+    .occasion-card:active {
+      transform: scale(0.97);
+    }
+
+    .card-label {
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      color: #524E48;
+      text-transform: uppercase;
+      padding: 2px 4px 4px 4px;
+    }
+
+    .card-thumb {
+      width: 100%;
+      height: 122px;
+      border-radius: 11px;
+      object-fit: cover;
+      display: block;
+      background: #EAE6DF;
+    }
+
+    /* Card coordinates matching image.png */
+    .card-work {
+      top: 10px;
+      left: 16px;
+    }
+
+    .card-casual {
+      top: 16px;
+      right: 16px;
+    }
+
+    .card-wedding {
+      top: 418px;
+      left: 16px;
+    }
+
+    .card-night-out {
+      top: 408px;
+      right: 16px;
+    }
+
+    /* Bottom Editorial Typography Section */
+    .bottom-section {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 0 24px 24px 24px;
+      z-index: 6;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 10px;
+    }
+
+    .headline {
+      font-family: 'Bodoni Moda', serif;
+      font-size: 38px;
+      line-height: 41px;
+      letter-spacing: -0.31px;
+      color: #1A1715;
+      font-weight: 400;
+      max-width: 350px;
+    }
+
+    .subtitle {
+      font-size: 13px;
+      line-height: 20px;
+      color: #78716C;
+      font-weight: 400;
+    }
+
+    /* 3-Step Progress Indicator */
+    .indicator-row {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 2px;
+    }
+
+    .bar {
+      height: 3px;
+      border-radius: 9999px;
+      background: #E5E0D6;
+      width: 24px;
+      transition: all 0.3s ease;
+    }
+
+    .bar.active {
+      width: 32px;
+      background: #5D6B52;
+    }
+
+    /* Occasion Toast Notification */
+    .toast {
+      position: absolute;
+      top: 24px;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50px);
+      background: rgba(26, 23, 21, 0.92);
+      color: #FFFFFF;
+      padding: 8px 16px;
+      border-radius: 9999px;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      z-index: 10;
+      opacity: 0;
+      transition: all 0.3s cubic-bezier(0.2, 0, 0, 1);
+      pointer-events: none;
+    }
+
+    .toast.show {
+      transform: translateX(-50%) translateY(0);
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="preview-header">
+    <h1>WARDROBE Onboarding</h1>
+    <p>Screen 03: "From your wardrobe to your best look." (Reference Match)</p>
+    
+    <div class="controls-bar">
+      <!-- View Zoom Controls -->
+      <div class="pill-group">
+        <button class="toggle-btn active" id="btnFit" onclick="setScale(0.85, 'btnFit')">Fit (85%)</button>
+        <button class="toggle-btn" id="btnFull" onclick="setScale(1.0, 'btnFull')">100%</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="frame-scaler" id="frameScaler">
+    <div class="device-frame">
+      <div class="device-scroll">
+        <!-- Layer 1: Central Hero Background Photograph (Positioned directly between cards) -->
+        <img src="onboarding_03_background.png" alt="WARDROBE Hero Model" class="hero-bg" />
+
+        <!-- Layer 2: Subtle Top Atmospheric Scrim -->
+        <div class="top-scrim"></div>
+
+        <!-- Layer 3: SVG Curved Connector Lines with Connecting Nodes -->
+        <svg class="connector-svg" viewBox="0 0 390 844" preserveAspectRatio="none">
+          <!-- WORK Connector: Upper Left -> Model Right Hair/Shoulder -->
+          <path d="M 122 114 Q 138 150 159.5 179" fill="none" stroke="#C9C2B7" stroke-width="1.2" stroke-linecap="round" />
+          <circle cx="159.5" cy="179" r="3" fill="#B2A99D" />
+
+          <!-- CASUAL Connector: Upper Right -> Model Left Collar/Shoulder -->
+          <path d="M 268 165 Q 255 182 244 193.5" fill="none" stroke="#C9C2B7" stroke-width="1.2" stroke-linecap="round" />
+          <circle cx="244" cy="193.5" r="3" fill="#B2A99D" />
+        </svg>
+
+        <!-- Layer 4: Four Floating Frosted Occasion Cards -->
+        <div class="occasion-cards-layer">
+          <!-- Card 1: WORK -->
+          <div class="occasion-card card-work" onclick="showToast('Selected: WORK Outfit')">
+            <div class="card-label">WORK</div>
+            <img src="work.png" alt="Work occasion look" class="card-thumb" />
+          </div>
+
+          <!-- Card 2: CASUAL -->
+          <div class="occasion-card card-casual" onclick="showToast('Selected: CASUAL Outfit')">
+            <div class="card-label">CASUAL</div>
+            <img src="casual.png" alt="Casual occasion look" class="card-thumb" />
+          </div>
+
+          <!-- Card 3: WEDDING -->
+          <div class="occasion-card card-wedding" onclick="showToast('Selected: WEDDING Outfit')">
+            <div class="card-label">WEDDING</div>
+            <img src="wedding.png" alt="Wedding occasion look" class="card-thumb" />
+          </div>
+
+          <!-- Card 4: NIGHT OUT -->
+          <div class="occasion-card card-night-out" onclick="showToast('Selected: NIGHT OUT Outfit')">
+            <div class="card-label">NIGHT OUT</div>
+            <img src="night_out.png" alt="Night Out occasion look" class="card-thumb" />
+          </div>
+        </div>
+
+        <!-- Layer 5: Bottom Soft Atmospheric Ivory Fade -->
+        <div class="bottom-fade"></div>
+
+        <!-- Layer 6: Bottom Editorial Section & Onboarding Indicator -->
+        <div class="bottom-section">
+          <h2 class="headline">From your closet<br>to your best look.</h2>
+          <p class="subtitle">AI that understands you.</p>
+
+          <div class="indicator-row">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar active"></div>
+          </div>
+        </div>
+
+        <!-- Toast -->
+        <div class="toast" id="toast"></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function setScale(scaleVal, activeBtnId) {
+      document.getElementById('frameScaler').style.transform = `scale(${scaleVal})`;
+      document.getElementById('frameScaler').style.marginBottom = scaleVal === 1.0 ? '20px' : '-90px';
+      document.getElementById('btnFit').classList.remove('active');
+      document.getElementById('btnFull').classList.remove('active');
+      document.getElementById(activeBtnId).classList.add('active');
+    }
+
+    let toastTimer;
+    function showToast(text) {
+      const toast = document.getElementById('toast');
+      toast.textContent = text;
+      toast.classList.add('show');
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => {
+        toast.classList.remove('show');
+      }, 2000);
+    }
+  </script>
+</body>
+</html>

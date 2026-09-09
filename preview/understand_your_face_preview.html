@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WARDROBE - Understand Your Face</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+    body {
+      background: #141312;
+      color: #1A1715;
+      font-family: 'Inter', -apple-system, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .screen-container {
+      position: relative;
+      width: 390px;
+      height: 858px;
+      background: #FBF9F5;
+      border-radius: 44px;
+      overflow: hidden;
+      box-shadow: 0 25px 60px rgba(0,0,0,0.55), 0 0 0 10px #242220;
+      display: flex;
+      flex-direction: column;
+    }
+    /* Hero Section */
+    .hero-section {
+      position: relative;
+      width: 390px;
+      height: 510px;
+      flex-shrink: 0;
+      background: #FBF9F5;
+      overflow: hidden;
+    }
+    .hero-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      display: block;
+    }
+    /* Top scrim for status bar */
+    .top-scrim {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 84px;
+      background: linear-gradient(180deg, rgba(251, 249, 245, 0.35) 0%, rgba(251, 249, 245, 0) 100%);
+      pointer-events: none;
+    }
+    .brand-wordmark {
+      position: absolute;
+      top: 14px;
+      left: 0;
+      right: 0;
+      text-align: center;
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      font-size: 11px;
+      letter-spacing: 0.22em;
+      color: #1A1715;
+      z-index: 5;
+    }
+    /* Bottom fade */
+    .bottom-fade {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 112px;
+      background: linear-gradient(0deg, #FBF9F5 0%, rgba(251, 249, 245, 0.6) 50%, rgba(251, 249, 245, 0) 100%);
+      pointer-events: none;
+      z-index: 3;
+    }
+    /* Framing overlay */
+    .framing-overlay {
+      position: absolute;
+      width: 148px;
+      height: 178px;
+      left: calc(50% - 74px);
+      top: 144px;
+      pointer-events: none;
+      z-index: 4;
+    }
+    .bracket {
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.9);
+    }
+    .bracket-tl {
+      top: 0; left: 0;
+      border-right: none; border-bottom: none;
+      border-radius: 3px 0 0 0;
+    }
+    .bracket-tr {
+      top: 0; right: 0;
+      border-left: none; border-bottom: none;
+      border-radius: 0 3px 0 0;
+    }
+    .bracket-bl {
+      bottom: 0; left: 0;
+      border-right: none; border-top: none;
+      border-radius: 0 0 0 3px;
+    }
+    .bracket-br {
+      bottom: 0; right: 0;
+      border-left: none; border-top: none;
+      border-radius: 0 0 3px 0;
+    }
+    .crosshair-h {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      height: 1px;
+      border-top: 1px dashed rgba(255, 255, 255, 0.5);
+    }
+    .crosshair-v {
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      border-left: 1px dashed rgba(255, 255, 255, 0.5);
+    }
+    /* Floating Badges */
+    .analysis-badge {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 8px 10px;
+      background: rgba(247, 244, 238, 0.82);
+      border: 1px solid rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      border-radius: 12px;
+      box-shadow: 0px 4px 20px -2px rgba(26, 23, 21, 0.05), 0px 2px 6px -1px rgba(26, 23, 21, 0.03);
+      z-index: 5;
+      cursor: pointer;
+      transition: transform 0.15s ease, background 0.2s ease;
+    }
+    .analysis-badge:active {
+      transform: scale(0.97);
+      background: rgba(247, 244, 238, 0.95);
+    }
+    .badge-left-content {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .badge-icon-box {
+      width: 24px;
+      height: 24px;
+      border-radius: 9999px;
+      background: rgba(255, 255, 255, 0.6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .badge-text-box {
+      display: flex;
+      flex-direction: column;
+    }
+    .badge-label {
+      font-size: 7.5px;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      color: #78716C;
+      line-height: 11px;
+    }
+    .badge-val {
+      font-size: 11px;
+      font-weight: 600;
+      color: #1A1715;
+      line-height: 13.5px;
+    }
+    .chevron-icon {
+      width: 5px;
+      height: 8px;
+      stroke: #A8A29E;
+      stroke-width: 1.2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      fill: none;
+      margin-left: 6px;
+    }
+    /* Specific Badge Positioning */
+    .badge-face-shape {
+      top: 26px;
+      left: 16px;
+      width: 128px;
+      height: 44px;
+    }
+    .badge-skin-tone {
+      top: 80px;
+      left: 18px;
+      width: 128px;
+      height: 44px;
+    }
+    .badge-undertone {
+      top: 82px;
+      right: 12px;
+      width: 128px;
+      height: 44px;
+    }
+    .badge-best-colors {
+      top: 136px;
+      right: 12px;
+      width: 128px;
+      height: 58px;
+    }
+    /* Color swatches */
+    .swatches-row {
+      display: flex;
+      align-items: center;
+      gap: 0;
+    }
+    .swatch-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      border: 0.8px solid #FFF;
+      margin-right: -4px;
+    }
+    .swatch-1 { background: #C06C54; z-index: 1; }
+    .swatch-2 { background: #7D8B72; z-index: 2; }
+    .swatch-3 { background: #C49A6C; z-index: 3; }
+
+    /* Editorial Section */
+    .editorial-section {
+      background: #FBF9F5;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 6px 24px;
+      text-align: center;
+    }
+    .headline {
+      font-family: 'Bodoni Moda', serif;
+      font-size: 34px;
+      font-weight: 400;
+      line-height: 37px;
+      letter-spacing: -0.34px;
+      color: #1A1715;
+      margin-top: 4px;
+    }
+    .subtitle {
+      font-size: 12.5px;
+      font-weight: 400;
+      line-height: 18px;
+      color: #78716C;
+      max-width: 270px;
+      margin-top: 10px;
+    }
+    /* Emblem */
+    .emblem-wrapper {
+      position: relative;
+      width: 54px;
+      height: 54px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 14px;
+    }
+    .emblem-circle {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.3);
+      border: 1px solid rgba(214, 206, 190, 0.6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .tick-top, .tick-bottom {
+      position: absolute;
+      width: 1px;
+      height: 5px;
+      background: #D6CEBE;
+      left: 50%;
+    }
+    .tick-top { top: 0; transform: translateX(-50%); }
+    .tick-bottom { bottom: 0; transform: translateX(-50%); }
+    .tick-left, .tick-right {
+      position: absolute;
+      height: 1px;
+      width: 5px;
+      background: #D6CEBE;
+      top: 50%;
+    }
+    .tick-left { left: 0; transform: translateY(-50%); }
+    .tick-right { right: 0; transform: translateY(-50%); }
+
+    /* Animations for scanner */
+    @keyframes pulse-ripple {
+      0% {
+        transform: scale(0.8);
+        opacity: 0.8;
+      }
+      100% {
+        transform: scale(2.0);
+        opacity: 0;
+      }
+    }
+
+    @keyframes scan-beam {
+      0% {
+        top: 10%;
+        opacity: 0;
+      }
+      10% {
+        opacity: 1;
+      }
+      90% {
+        opacity: 1;
+      }
+      100% {
+        top: 90%;
+        opacity: 0;
+      }
+    }
+
+    .ripple {
+      position: absolute;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      border: 1px solid #7D8B72;
+      animation: pulse-ripple 2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+      pointer-events: none;
+    }
+
+    .scan-beam {
+      position: absolute;
+      width: 24px;
+      height: 1.5px;
+      background: #7D8B72;
+      box-shadow: 0 0 6px 2px rgba(125, 139, 114, 0.5);
+      animation: scan-beam 2.5s ease-in-out infinite;
+      pointer-events: none;
+    }
+
+    .bottom-label {
+      font-size: 8.5px;
+      font-weight: 500;
+      letter-spacing: 2.04px;
+      text-transform: uppercase;
+      color: #7D8B72;
+      margin-top: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div style="display:flex;gap:12px;margin-bottom:16px;flex-wrap:wrap;justify-content:center;">
+    <a href="app_flow_preview.html" style="background:#242220;color:#E5E0D6;border:1px solid #383533;padding:8px 14px;border-radius:9999px;font-size:11.5px;font-weight:500;text-decoration:none;">← Full Flow</a>
+    <a href="face_capture_preview.html" style="background:#7D8B72;color:#FFFFFF;border:1px solid #7D8B72;padding:8px 16px;border-radius:9999px;font-size:11.5px;font-weight:600;text-decoration:none;">Next: Face Capture (Screen 12) →</a>
+  </div>
+  <div class="screen-container">
+    <!-- Hero Section -->
+    <div class="hero-section">
+      <img class="hero-img" src="understand_face_hero.png" alt="Editorial Fashion Portrait">
+      <div class="top-scrim"></div>
+
+      <!-- Facial Alignment Frame -->
+      <div class="framing-overlay">
+        <div class="bracket bracket-tl"></div>
+        <div class="bracket bracket-tr"></div>
+        <div class="bracket bracket-bl"></div>
+        <div class="bracket bracket-br"></div>
+        <div class="crosshair-h"></div>
+        <div class="crosshair-v"></div>
+      </div>
+
+      <!-- Badge 1: Face Shape -->
+      <div class="analysis-badge badge-face-shape">
+        <div class="badge-left-content">
+          <div class="badge-icon-box">
+            <svg width="13" height="15" viewBox="0 0 13 15" fill="none">
+              <ellipse cx="6.5" cy="7.5" rx="5.5" ry="6.5" stroke="#1A1715" stroke-width="1.1"/>
+              <path d="M4 10C5 11.5 8 11.5 9 10" stroke="#1A1715" stroke-width="1" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="badge-text-box">
+            <span class="badge-label">FACE SHAPE</span>
+            <span class="badge-val">Oval</span>
+          </div>
+        </div>
+        <svg class="chevron-icon" viewBox="0 0 5 8"><path d="M1 1L4 4L1 7"/></svg>
+      </div>
+
+      <!-- Badge 2: Skin Tone -->
+      <div class="analysis-badge badge-skin-tone">
+        <div class="badge-left-content">
+          <div class="badge-icon-box">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+              <circle cx="7" cy="7" r="3.2" stroke="#1A1715" stroke-width="1.1"/>
+              <line x1="7" y1="1" x2="7" y2="2.5" stroke="#1A1715" stroke-width="1" stroke-linecap="round"/>
+              <line x1="7" y1="11.5" x2="7" y2="13" stroke="#1A1715" stroke-width="1" stroke-linecap="round"/>
+              <line x1="1" y1="7" x2="2.5" y2="7" stroke="#1A1715" stroke-width="1" stroke-linecap="round"/>
+              <line x1="11.5" y1="7" x2="13" y2="7" stroke="#1A1715" stroke-width="1" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="badge-text-box">
+            <span class="badge-label">SKIN TONE</span>
+            <span class="badge-val">Warm Ivory</span>
+          </div>
+        </div>
+        <svg class="chevron-icon" viewBox="0 0 5 8"><path d="M1 1L4 4L1 7"/></svg>
+      </div>
+
+      <!-- Badge 3: Undertone -->
+      <div class="analysis-badge badge-undertone">
+        <div class="badge-left-content">
+          <div class="badge-icon-box">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+              <circle cx="7" cy="2" r="1" fill="#1A1715"/>
+              <circle cx="10.5" cy="3.5" r="1" fill="#1A1715"/>
+              <circle cx="12" cy="7" r="1" fill="#1A1715"/>
+              <circle cx="10.5" cy="10.5" r="1" fill="#1A1715"/>
+              <circle cx="7" cy="12" r="1" fill="#1A1715"/>
+              <circle cx="3.5" cy="10.5" r="1" fill="#1A1715"/>
+              <circle cx="2" cy="7" r="1" fill="#1A1715"/>
+              <circle cx="3.5" cy="3.5" r="1" fill="#1A1715"/>
+            </svg>
+          </div>
+          <div class="badge-text-box">
+            <span class="badge-label">UNDERTONE</span>
+            <span class="badge-val">Warm</span>
+          </div>
+        </div>
+        <svg class="chevron-icon" viewBox="0 0 5 8"><path d="M1 1L4 4L1 7"/></svg>
+      </div>
+
+      <!-- Badge 4: Best Colors -->
+      <div class="analysis-badge badge-best-colors">
+        <div class="badge-left-content">
+          <div class="badge-icon-box">
+            <div class="swatches-row">
+              <div class="swatch-dot swatch-1"></div>
+              <div class="swatch-dot swatch-2"></div>
+              <div class="swatch-dot swatch-3"></div>
+            </div>
+          </div>
+          <div class="badge-text-box">
+            <span class="badge-label">BEST COLORS</span>
+            <span class="badge-val">Earth<br>Tones</span>
+          </div>
+        </div>
+        <svg class="chevron-icon" viewBox="0 0 5 8"><path d="M1 1L4 4L1 7"/></svg>
+      </div>
+
+      <div class="bottom-fade"></div>
+    </div>
+
+    <!-- Lower Editorial Section -->
+    <div class="editorial-section">
+      <div>
+        <h1 class="headline">Understand<br>your face.</h1>
+        <p class="subtitle">
+          We’ll analyze your unique facial features, skin tone and undertone to create personalized style recommendations.
+        </p>
+      </div>
+
+      <a href="face_capture_preview.html" style="text-decoration:none;display:flex;flex-direction:column;align-items:center;cursor:pointer;" title="Tap to begin Face Capture">
+        <div class="emblem-wrapper">
+          <div class="tick-top"></div>
+          <div class="tick-bottom"></div>
+          <div class="tick-left"></div>
+          <div class="tick-right"></div>
+          <div class="ripple"></div>
+          <div class="scan-beam"></div>
+          <div class="emblem-circle">
+            <svg width="18" height="22" viewBox="0 0 18 22" fill="none">
+              <path d="M9 21C3 15 1 10 1 5C1 2.5 4.5 1 9 1C13.5 1 17 2.5 17 5C17 10 15 15 9 21Z" stroke="#7D8B72" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="6.5" cy="8" r="0.9" fill="#7D8B72"/>
+              <circle cx="11.5" cy="8" r="0.9" fill="#7D8B72"/>
+            </svg>
+          </div>
+        </div>
+        <div class="bottom-label">FACE ANALYSIS</div>
+      </a>
+    </div>
+  </div>
+</body>
+</html>

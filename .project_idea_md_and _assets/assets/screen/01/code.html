@@ -1,0 +1,101 @@
+<!DOCTYPE html><html class="h-full" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+<title>WARDROBE - Your style, smarter.</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              ivory: '#F7F4EE',
+              surface: '#FBF9F5',
+              olive: '#647259',
+              oliveHover: '#54604b',
+              charcoal: '#1A1715',
+              muted: '#5A5652',
+              track: '#E2DDD3'
+            }
+          },
+          fontFamily: {
+            serif: ['"Bodoni Moda"', 'serif'],
+            sans: ['Inter', 'sans-serif']
+          },
+          letterSpacing: {
+            brand: '0.4em',
+            subtle: '0.16em'
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    body {
+      -webkit-tap-highlight-color: transparent;
+      user-select: none;
+    }
+  </style>
+</head>
+<body class="h-full bg-[#1A1715] text-brand-charcoal font-sans antialiased overflow-x-hidden flex justify-center">
+<!-- BEGIN: MobileScreenContainer -->
+<main class="relative w-full max-w-[390px] h-screen min-h-[700px] flex flex-col justify-between overflow-hidden shadow-2xl">
+<!-- Background Full-Bleed Image Container -->
+<div class="absolute inset-0 z-0">
+<img alt="Diverse group wearing styled neutral apparel" class="w-full h-full object-cover object-[center_35%]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFTWAbdDO2YHLTnqNfM0IpwkA0A1qmn9MRGUAvrxTwpWt82JH50YSgROXr7dnWT-5MCWGboBHJwMzMT29MUhUuyF-2bB_y0ZJMUqutwoAeQKA8loQhQjihKj2Fuf2ROY3amMUytTpTKeIQCFN9YsCvj5s3uJgp5Yl2NtmMPCAQNygm3lebgnMpsZ6W72ZysiOEiqXnOol9rlxqDj5SHgT2mCfn8KJBMeY5BSdI5mJXxd7zhEqELzcZedruWw2u7IiFHc8">
+<!-- Subtle top atmospheric gradient scrim for pristine typography legibility -->
+<div class="absolute inset-x-0 top-0 h-64 bg-gradient-to-b from-[#F7F4EE]/90 via-[#F7F4EE]/45 to-transparent pointer-events-none"></div>
+<!-- Subtle bottom warm scrim for CTA legibility -->
+<div class="absolute inset-x-0 bottom-0 h-64 bg-gradient-to-t from-[#F7F4EE]/95 via-[#F7F4EE]/70 to-transparent pointer-events-none"></div>
+</div>
+<!-- BEGIN: TopBrandingAndHeroText (Overlaid on top of image) -->
+<header class="relative z-10 pt-12 pb-4 px-6 flex flex-col items-center text-center">
+<!-- Brand Wordmark -->
+<h1 class="text-[11px] font-sans font-semibold tracking-[0.42em] uppercase text-brand-charcoal select-none mb-7">
+    WARDROBE
+  </h1>
+<!-- Editorial Headline -->
+<h2 class="font-serif text-[42px] leading-[1.08] text-brand-charcoal tracking-normal font-normal">
+    Your style,<br>
+<span class="italic font-normal">smarter.</span>
+</h2>
+<!-- Subtitle Description -->
+<p class="mt-4 text-[13.5px] leading-relaxed text-brand-muted max-w-[270px] font-normal"><br></p>
+</header>
+<!-- END: TopBrandingAndHeroText -->
+<!-- Flexible Spacer to keep middle photo composition visible -->
+<div class="flex-1 pointer-events-none"></div>
+<!-- BEGIN: BottomInteractiveArea (Overlaid on bottom of image) -->
+<section class="relative z-10 w-full px-6 pb-9 flex flex-col items-center gap-4">
+<!-- Primary Action CTA Button -->
+<button class="w-full max-w-[280px] h-[52px] bg-brand-olive hover:bg-brand-oliveHover active:scale-[0.985] text-white text-[15px] font-medium tracking-normal rounded-full flex items-center justify-center gap-2.5 shadow-md shadow-brand-charcoal/10 transition-all duration-200 ease-out focus:outline-none focus:ring-2 focus:ring-brand-olive/40 focus:ring-offset-2" data-purpose="primary-action-btn" type="button">
+<span class="">Get Started</span>
+<svg aria-hidden="true" class="w-4 h-4 text-white transform translate-x-0.5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+<path d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+<!-- Secondary Login Action Link -->
+<button class="text-[11px] font-sans font-medium tracking-subtle text-brand-charcoal/80 hover:text-brand-charcoal uppercase transition-colors duration-150 py-1" data-purpose="secondary-account-link" type="button">
+    I ALREADY HAVE AN ACCOUNT
+  </button>
+<!-- Carousel Progress Indicator -->
+<div aria-label="Step indicator" class="flex items-center justify-center gap-1.5 pt-1">
+<!-- Active Slide Pill -->
+<span class="w-6 h-[3.5px] rounded-full bg-brand-olive transition-all duration-300"></span>
+<!-- Inactive Slide Pill 1 -->
+<span class="w-5 h-[3.5px] rounded-full bg-brand-charcoal/20"></span>
+<!-- Inactive Slide Pill 2 -->
+<span class="w-5 h-[3.5px] rounded-full bg-brand-charcoal/20"></span>
+</div>
+</section>
+<!-- END: BottomInteractiveArea -->
+</main>
+<!-- END: MobileScreenContainer -->
+
+
+</body></html>

@@ -1,0 +1,387 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+<title>Wardrobe - Your Style, Understood</title>
+<!-- Tailwind CSS v3 with forms and container queries -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts: Bodoni Moda & Inter -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+<!-- Tailwind Configuration -->
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              bg: '#FBF9F5',
+              surface: '#F6F3EC',
+              card: '#F5F2EA',
+              ink: '#1D1A16',
+              muted: '#7A736B',
+              olive: '#5E6852',
+              terracotta: '#BA664C',
+              border: '#E8E3D8'
+            }
+          },
+          fontFamily: {
+            serif: ['"Bodoni Moda"', 'serif'],
+            sans: ['Inter', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+<!-- Typography & Layout Styles -->
+<style data-purpose="typography">
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #FBF9F5;
+      color: #1D1A16;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    .font-editorial {
+      font-family: 'Bodoni Moda', serif;
+    }
+    .tracking-luxury {
+      letter-spacing: 0.28em;
+    }
+    .tracking-subtle {
+      letter-spacing: 0.12em;
+    }
+  </style>
+<!-- Utility Styles for Clean Scrollbars & App Container -->
+<style data-purpose="layout">
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+<body class="bg-[#FBF9F5] text-brand-ink selection:bg-brand-olive/20 pb-28">
+<!-- Main Container -->
+<div class="max-w-[430px] mx-auto min-h-screen relative overflow-x-hidden flex flex-col">
+<!-- BEGIN: MainHeader -->
+<header class="pt-6 pb-4 px-6 flex items-center justify-between sticky top-0 bg-[#FBF9F5]/90 backdrop-blur-md z-40 transition-colors">
+<div class="w-6"></div> <!-- Left spacer for visual balance -->
+<h1 class="text-xs font-medium tracking-luxury uppercase text-brand-ink text-center translate-x-1">
+        W A R D R O B E
+      </h1>
+<!-- Top Right Minimal Icon (Hanger/Bag icon) -->
+<button aria-label="Notifications &amp; Profile" class="w-7 h-7 flex items-center justify-center text-brand-ink opacity-80 hover:opacity-100 transition-opacity">
+<svg class="w-5 h-5 stroke-[1.25]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M12 4a3 3 0 0 0-3 3c0 .85.35 1.62.92 2.16L3 17h18l-6.92-7.84A2.99 2.99 0 0 0 15 7a3 3 0 0 0-3-3z" stroke-linecap="round" stroke-linejoin="round"></path>
+<path d="M9 20a3 3 0 0 0 6 0" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</header>
+<!-- END: MainHeader -->
+<!-- BEGIN: HeroIntroduction -->
+<section class="px-6 pt-3 pb-5">
+<div class="inline-flex flex-col mb-1.5">
+<span class="text-[10px] uppercase font-semibold tracking-widest text-brand-ink">
+          GOOD AFTERNOON
+        </span>
+<span class="w-8 h-[1.5px] bg-[#BA664C] mt-0.5 rounded-full"></span>
+</div>
+<h2 class="font-editorial text-[38px] leading-[1.08] font-normal tracking-tight text-brand-ink mt-2 mb-2">
+        Your style,<br>understood.
+      </h2>
+<p class="text-[13px] text-brand-muted font-normal tracking-tight">
+        We’ve started building a style profile around you.
+      </p>
+</section>
+<!-- END: HeroIntroduction -->
+<!-- BEGIN: StyleProfileCarousel -->
+<section class="mb-8 overflow-x-auto no-scrollbar pl-6 pr-2 flex gap-3.5 snap-x snap-mandatory">
+<!-- Primary Card: Warm Neutral Profile -->
+<div class="snap-start shrink-0 w-[350px] bg-[#F6F3EC] rounded-2xl p-3 border border-brand-border/60 flex shadow-sm">
+<!-- Left Image with 1/3 badge -->
+<div class="relative w-[148px] h-[184px] rounded-xl overflow-hidden bg-brand-surface shrink-0">
+<img alt="Portrait of woman in ivory blazer" class="w-full h-full object-cover object-center" src="https://lh3.googleusercontent.com/aida/AEtjO1WRbviwDSrkI19YYcouQT7VvmwJZ4jf16ZYY65mF4aylBlk4bXedYdgFFUGn_xrJb0yjynxiaifuLtThX2HlLeWqA5Xex-Y18Gb8C_2GuHHOCU8jnZy43rAOjFyixTzeQpJm5013P2D7BIiEplwLsmlEri4A9dbiA44zDgjqqZSPqExA6CqBeBSAQDJMhtogVC5j4yIv_C7UldxC76_on5W-dPzZ56qKfpHKHx1Emm6JIg6NZ-RKbi3-8E">
+<!-- Badge overlay -->
+<div class="absolute bottom-2.5 left-2.5 bg-black/35 backdrop-blur-md rounded px-1.5 py-0.5 text-[10px] font-medium text-white tracking-wider flex items-center gap-1.5">
+<span>1/3</span>
+<span class="w-6 h-[1.5px] bg-white/70 rounded-full inline-block"></span>
+</div>
+</div>
+<!-- Right Content Details -->
+<div class="flex flex-col justify-between pl-3.5 py-1 text-left flex-1">
+<div>
+<span class="text-[8.5px] font-semibold tracking-wider text-brand-muted uppercase block">
+              YOUR STYLE PROFILE
+            </span>
+<h3 class="font-editorial text-[19px] tracking-wide text-brand-ink font-normal uppercase mt-0.5 mb-1.5">
+              WARM NEUTRAL
+            </h3>
+<!-- Feature Bullet List -->
+<ul class="text-[11px] text-brand-ink/80 space-y-0.5 leading-relaxed font-light mb-3">
+<li class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-[#BA9873] shrink-0"></span>
+<span>Balanced contrast</span>
+</li>
+<li class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-[#BA9873] shrink-0"></span>
+<span>Relaxed tailoring</span>
+</li>
+</ul>
+<!-- Swatches -->
+<div class="flex items-center gap-1.5">
+<span class="w-4 h-4 rounded-full bg-[#EADFD0] border border-black/5 inline-block shadow-inner" title="Warm Ivory"></span>
+<span class="w-4 h-4 rounded-full bg-[#C29868] inline-block shadow-inner" title="Camel"></span>
+<span class="w-4 h-4 rounded-full bg-[#B86548] inline-block shadow-inner" title="Terracotta"></span>
+<span class="w-4 h-4 rounded-full bg-[#646F58] inline-block shadow-inner" title="Muted Olive"></span>
+<span class="w-4 h-4 rounded-full bg-[#483B32] inline-block shadow-inner" title="Espresso"></span>
+</div>
+</div>
+<!-- Analysis Action Link -->
+<a class="inline-flex items-center gap-1 text-[9.5px] font-semibold uppercase tracking-wider text-brand-ink border-b border-brand-ink pb-0.5 w-fit hover:opacity-75 transition-opacity mt-2" href="#">
+<span>VIEW MY ANALYSIS</span>
+<span class="text-xs">→</span>
+</a>
+</div>
+</div>
+<!-- Carousel Right Peek Card -->
+<div class="snap-start shrink-0 w-8 bg-[#F6F3EC] rounded-l-2xl border border-brand-border/60 overflow-hidden opacity-75">
+<img alt="Style reference peek" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1WG0V6WFZnxok6M_YYXu1uLHymMawDtciO7QSnCxq9_Km7GSNIeTu5Q-QfOLmsjoj1Dja_P4zcg9gq6q15ZMH5ft9i2BwHZdL2-uxzfdTftb8AXGVpXlu5ItQ0zFDonJ9slCWIIfGhHFfx-HM67wUJXaDgGnjBEHVxQisGvrkk5lzHSbmeXdkNxNQsYSC2BFs2Qawf5U_5acTqoOQeWTL0EuCkcsmkxb8zbsNKxr52ukkVLPD08NEwTHdQV">
+</div>
+</section>
+<!-- END: StyleProfileCarousel -->
+<!-- BEGIN: TodaysLookSection -->
+<section class="px-6 mb-7">
+<div class="inline-flex flex-col mb-2.5">
+<span class="text-[10px] uppercase font-semibold tracking-widest text-brand-ink">
+          TODAY'S LOOK
+        </span>
+<span class="w-8 h-[1.5px] bg-[#BA664C] mt-0.5 rounded-full"></span>
+</div>
+<!-- Main Split Card -->
+<div class="bg-[#F6F3EC] rounded-2xl p-3 border border-brand-border/60 flex items-stretch shadow-sm">
+<!-- Left Full Outfit Photo -->
+<div class="w-[148px] h-[228px] rounded-xl overflow-hidden bg-brand-surface shrink-0 relative">
+<img alt="Model standing in wide leg trousers and linen blazer" class="w-full h-full object-cover object-top" src="https://lh3.googleusercontent.com/aida/AEtjO1X7aP16OROVrE3SH3pBGkBnTLJqgnZfhsvbIJ1Y3jOIurY3eo-BMQvhEOEZgrbEvdZWH91sPZs93Eui3cLQ_ZqvYpT8GDRlGCj_BaUCh_3OA2UONZlGga8-BWvUq_cpYuBVqtdy2tTQdXmCprzN_zhye9EJZsdLvOC45OCMMBHhuZEED2klatbpHWkJp0N1nFT1wHbtgovTZU9oejVwAhye1kbzYIq9TEZGApsy1QxIlYfQi9SftWnliezV">
+</div>
+<!-- Right Details & Weather Context -->
+<div class="flex flex-col justify-between pl-3.5 py-1 flex-1">
+<div>
+<!-- Weather pill -->
+<div class="flex items-start gap-1.5 text-brand-muted mb-2">
+<svg class="w-4 h-4 shrink-0 stroke-[1.25] text-brand-muted mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M12 3v2M12 19v2M5.64 5.64l1.41 1.41M16.95 16.95l1.41 1.41M3 12h2M19 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" stroke-linecap="round"></path>
+<path d="M17 18a5 5 0 0 0-9.9-1A4 4 0 0 0 6 20h11a3 3 0 0 0 0-6h-.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<div class="leading-tight">
+<span class="text-[10.5px] font-medium text-brand-ink block">28°C · Partly cloudy</span>
+<span class="text-[10px] text-brand-muted block mt-0.5">Lightweight layers work best today.</span>
+</div>
+</div>
+<!-- Serif Headline -->
+<div class="w-full h-[1px] bg-brand-border/70 my-2"></div>
+<h4 class="font-editorial text-[22px] leading-[1.18] font-normal text-brand-ink pr-1 mt-1">
+              Effortless layers for a warm day.
+            </h4>
+</div>
+<!-- Action CTA -->
+<a class="inline-flex items-center gap-1.5 text-[9.5px] font-semibold uppercase tracking-wider text-brand-ink border-b border-brand-ink pb-0.5 w-fit hover:opacity-75 transition-opacity mt-2" href="#">
+<span>SEE THE LOOK</span>
+<span class="text-xs">→</span>
+</a>
+</div>
+</div>
+</section>
+<!-- END: TodaysLookSection -->
+<!-- BEGIN: TryThisScannerBanner -->
+<section class="px-6 mb-7">
+<div class="relative bg-gradient-to-r from-[#F6F3EC] via-[#F4EDE2] to-[#ECE1D0] rounded-2xl p-4 border border-brand-border/60 overflow-hidden shadow-sm flex items-center justify-between">
+<!-- Left Call to Action -->
+<div class="z-10 max-w-[55%]">
+<div class="inline-flex flex-col mb-1">
+<span class="text-[9px] uppercase font-semibold tracking-widest text-brand-ink">TRY THIS</span>
+<span class="w-5 h-[1.5px] bg-[#BA664C] mt-0.5 rounded-full"></span>
+</div>
+<h3 class="font-editorial text-[18px] leading-tight text-brand-ink font-normal mb-1">
+            Scan a clothing item
+          </h3>
+<p class="text-[10.5px] text-brand-muted leading-tight mb-3">
+            See how a piece suits you before you buy.
+          </p>
+<button class="bg-[#5E6852] hover:bg-[#505a45] text-white px-3 py-2 rounded-lg text-[10px] font-semibold tracking-wider uppercase flex items-center gap-1.5 transition-colors shadow-sm">
+<!-- Camera outline icon -->
+<svg class="w-3.5 h-3.5 stroke-[1.5]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" stroke-linecap="round" stroke-linejoin="round"></path>
+<circle cx="12" cy="13" r="4" stroke-linecap="round" stroke-linejoin="round"></circle>
+</svg>
+<span>SCAN NOW</span>
+</button>
+</div>
+<!-- Right Side Scanner Visual -->
+<div class="relative w-[130px] h-[115px] flex items-center justify-center shrink-0">
+<!-- Background Rack Image Mockup -->
+<div class="w-full h-full rounded-lg overflow-hidden relative shadow-inner">
+<img alt="Scanner graphic demonstration" class="w-full h-full object-cover object-[70%_52%]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYRLJM4OYSgdOTINR-FYvikle2esr2bmGuFx2bb1xHmrJ6aTbVxofQE85WRjESU97mGpDJ60kwDMJ56FheE6mFX0rbU5vodBXL5u6D2nl9ULN4Wz4wQS_b2CbW67oBj55CMrWTK488ydpw4x-hcfC99iqvrF06-hyNgXQQvwCph-Wd2K_F2pq0N_TbArgUOMP3QaWh-Bg9xNu3miS5AGPII4qlIzqc2cO-7HIldMvC9qijsRFPUCkHEwtz0BnusMfWdi4">
+</div>
+</div>
+</div>
+</section>
+<!-- END: TryThisScannerBanner -->
+<!-- BEGIN: GridDiscoveryCards -->
+<section class="px-6 grid grid-cols-2 gap-3 mb-7">
+<!-- Card 1: My Wardrobe -->
+<div class="bg-[#F6F3EC] rounded-2xl p-3.5 border border-brand-border/60 flex flex-col justify-between shadow-sm">
+<div>
+<!-- Header with icon -->
+<div class="flex items-center gap-1.5 mb-1.5 text-brand-ink">
+<svg class="w-3.5 h-3.5 stroke-[1.25]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M12 4a3 3 0 0 0-3 3c0 .85.35 1.62.92 2.16L3 17h18l-6.92-7.84A2.99 2.99 0 0 0 15 7a3 3 0 0 0-3-3z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span class="text-[8.5px] font-semibold uppercase tracking-wider text-brand-ink">MY WARDROBE</span>
+</div>
+<h4 class="text-[11px] font-normal leading-tight text-brand-ink mb-0.5">
+            Your closet starts here.
+          </h4>
+<p class="text-[9.5px] text-brand-muted leading-tight mb-3 font-light">
+            Add pieces as you scan or shop.
+          </p>
+<!-- Wardrobe Thumbnail Row -->
+<div class="flex items-center gap-1 mb-3">
+<div class="w-7 h-8 rounded bg-white p-0.5 border border-black/5 flex items-center justify-center overflow-hidden">
+<img alt="Blazer" class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WmCt62li6dPstp_UbASJInKov7MJ5wlE9ZjNjYaVQEM-U3GSdecOlUzYoNaRBZsOAS4qpH5Euohw-_BdLcAY_BFayrpVMqG-H8vEHTKu-CEBtAel7EDwE1NO1fAeFFkz8O3tBALEk61G09Ykzmjphfywg_-Ic0Af-_8QHgWtp4Fd4bPjHpg73dIoozNVvcP2q4PGEyLYv-uXeeBQLJoQyAAMqpI6R51Nu9Wf_b0uwUpzLP5Myp7zJwukXE">
+</div>
+<div class="w-7 h-8 rounded bg-white p-0.5 border border-black/5 flex items-center justify-center overflow-hidden">
+<img alt="Top" class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1V-8iTrOVnqyFaimXi0RPmrGKI1Mbv3j0fia69rk9LHtIPh4GU6MTHlUUIf4CMbeSOysy-VQ-NNtxES0zYvTv9Y0zbgf2oxN7KfzwqhjN7e1CqVWiw9ldBLY761jdpywbls-ngyRhjPr3uF3R03T-yLMybMwLnjUFt6c4NSL5VJcr0r_17lN8vbPoZfQo4MyIfr5QjJGgZgQmG09es4bpoGzXZiWvTtcCAwOvBBJWgiYcC9hIm7hva5r1s">
+</div>
+<div class="w-7 h-8 rounded bg-white p-0.5 border border-black/5 flex items-center justify-center overflow-hidden">
+<img alt="Trousers" class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VIXbd_EkkvJfXVDxYrrIZYS2oAJsJKt1Lc-3POoxADBfXRjK9TGoR4X7m6TwqLJTEZTQFu0vvrMCg4QH4AXkZvvoWIuTDYA2sZrW0DraIxyl-u6oQ0lRRuj5f1SYpgrnnV73Zic996lp3SENnV3cWPWzICf0gxBBsAYxlWTQbS_143Sdwu-EBlutgKLh_awJlHM5eN_8BqkTZMEhLPZXiZWbRvVi-sFYCb4kDmQO7DwqGR0jHkuj4tP7Ct">
+</div>
+<div class="w-7 h-8 rounded bg-white p-0.5 border border-black/5 flex items-center justify-center overflow-hidden">
+<img alt="Bag" class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VXDIa_tHjQJXyLZGk0Rr0TSdGaXGsr8NuUv1_qu0o9fKavzcL6L5wHL-qR6RmjHl5GDUAXzNxBwmhD6lQGJamQ7XvjS5PU1bS4Nt3eTHutlR22eX7QjFCQFAEmMTYTaV22LtxMC94VbkNpnK19I_mnh9-xCJqpCMcFKNTtZTpZ6c9pANITrAgPZ-kSy15KAHaBq5rqW4ADwI0duBSsAfX1UaKDWMjF2T6o9shEtcRxcLa3Wne5kQe4FTPw">
+</div>
+<!-- Add Tile -->
+<button aria-label="Add item" class="w-7 h-8 rounded bg-brand-surface border border-dashed border-brand-border/90 flex items-center justify-center text-brand-muted hover:text-brand-ink text-xs font-light">
+              +
+            </button>
+</div>
+</div>
+<!-- Action Link -->
+<a class="inline-flex items-center gap-1 text-[9px] font-semibold uppercase tracking-wider text-brand-ink border-b border-brand-ink pb-0.5 w-fit hover:opacity-75 transition-opacity" href="#">
+<span>VIEW WARDROBE</span>
+<span>→</span>
+</a>
+</div>
+<!-- Card 2: Your Stylist -->
+<div class="bg-[#F6F3EC] rounded-2xl p-3.5 border border-brand-border/60 flex flex-col justify-between shadow-sm">
+<div>
+<!-- Header with icon -->
+<div class="flex items-center gap-1.5 mb-1.5 text-brand-ink">
+<svg class="w-3.5 h-3.5 stroke-[1.25]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" stroke-linecap="round" stroke-linejoin="round"></path>
+<path d="M9 9h.01M15 9h.01" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span class="text-[8.5px] font-semibold uppercase tracking-wider text-brand-ink">YOUR STYLIST</span>
+</div>
+<h4 class="font-editorial text-[14px] leading-tight text-brand-ink font-normal mb-1.5">
+            “What should I wear?”
+          </h4>
+<p class="text-[9.5px] text-brand-muted leading-tight mb-3 font-light">
+            Tell me where you’re going, and I’ll build a look around you.
+          </p>
+</div>
+<!-- Action Link -->
+<a class="inline-flex items-center gap-1 text-[9px] font-semibold uppercase tracking-wider text-brand-ink border-b border-brand-ink pb-0.5 w-fit hover:opacity-75 transition-opacity pt-4" href="#">
+<span>ASK MY STYLIST</span>
+<span>→</span>
+</a>
+</div>
+</section>
+<!-- END: GridDiscoveryCards -->
+<!-- BEGIN: ForYouSection -->
+<section class="mb-5">
+<div class="px-6 flex items-center justify-between mb-3">
+<span class="text-[10px] uppercase font-semibold tracking-widest text-brand-ink">
+          FOR YOU
+        </span>
+<a class="text-[9.5px] uppercase font-semibold tracking-wider text-brand-muted hover:text-brand-ink flex items-center gap-1 transition-colors" href="#">
+<span>EXPLORE MORE</span>
+<span>→</span>
+</a>
+</div>
+<!-- Horizontal Cards Carousel -->
+<div class="overflow-x-auto no-scrollbar pl-6 pr-3 flex gap-2.5">
+<!-- Tile 1: Combinations -->
+<div class="relative w-[112px] h-[78px] rounded-xl overflow-hidden shrink-0 group cursor-pointer shadow-sm">
+<img alt="Your best combinations" class="w-full h-full object-cover object-[15%_90%]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbdkN3HA3ZDlJit7O0-1PovUveE8Lv6YuCbxu0Jni8_wodhSXJzi1Z0I6hC8kZe1Yv-itricMEaZAEagHglKDWIL08BxkIE0VODYMAcziCv8e34Z6SRQij58eDM4rVgulIkUlFBSvl1gWDXF1ygfVeBUMmVOBCmFXwI4OBBJCpxBxpV1PvcA7aAhIgOTsVwtlO6QFcKQsvTdYRFwiwQeLNArgudeh6ZcHfZU1IafeKtk7YolR7r8r0jK2GQuqPGQHdmgs">
+<div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent p-2 flex items-end">
+<span class="text-[9.5px] font-medium text-white leading-tight">
+              Your best combinations
+            </span>
+</div>
+</div>
+<!-- Tile 2: Color Palette -->
+<div class="relative w-[112px] h-[78px] rounded-xl overflow-hidden shrink-0 group cursor-pointer shadow-sm">
+<img alt="Looks for your color palette" class="w-full h-full object-cover object-top" src="https://lh3.googleusercontent.com/aida/AEtjO1WG0V6WFZnxok6M_YYXu1uLHymMawDtciO7QSnCxq9_Km7GSNIeTu5Q-QfOLmsjoj1Dja_P4zcg9gq6q15ZMH5ft9i2BwHZdL2-uxzfdTftb8AXGVpXlu5ItQ0zFDonJ9slCWIIfGhHFfx-HM67wUJXaDgGnjBEHVxQisGvrkk5lzHSbmeXdkNxNQsYSC2BFs2Qawf5U_5acTqoOQeWTL0EuCkcsmkxb8zbsNKxr52ukkVLPD08NEwTHdQV">
+<div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent p-2 flex items-end">
+<span class="text-[9.5px] font-medium text-white leading-tight">
+              Looks for your color palette
+            </span>
+</div>
+</div>
+<!-- Tile 3: Trending Styles -->
+<div class="relative w-[112px] h-[78px] rounded-xl overflow-hidden shrink-0 group cursor-pointer shadow-sm">
+<img alt="Trending styles that suit you" class="w-full h-full object-cover object-[65%_90%]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhq_ryKoOdQ8U8Kz3ApkAtEcmtuvtILfwqlyQsbBo5VBOtp3QI_ZH3vfZXZftk4ae0PJOreJTPhBdmgcokyZyLVjCdq-bKm7guS4gKp-T18kaKgzIi9mQabjYpGuNuhxul-RhAaGjhSe0wVtPL-qAhJGLP_72Sg65ndaNzFXrTKY_QbsqULk-AakaxogLbbFpSID8WPGiIeFjVVDb0uILM7Q-4CJ0HyRNdQLgHPZha6WX3saHYLehJTZ5EGNbEJzJ9QuU">
+<div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent p-2 flex items-end">
+<span class="text-[9.5px] font-medium text-white leading-tight">
+              Trending styles that suit you
+            </span>
+</div>
+</div>
+<!-- Tile 4: More For You Icon Tile -->
+<div class="w-[82px] h-[78px] rounded-xl bg-[#F6F3EC] border border-brand-border/60 shrink-0 flex flex-col items-center justify-center p-2 text-center shadow-sm cursor-pointer hover:bg-white/60 transition-colors">
+<!-- Star sparkle icon -->
+<svg class="w-5 h-5 stroke-[1.2] text-[#8C7A6B] mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M12 2l2.4 7.2L22 12l-7.6 2.8L12 22l-2.4-7.2L2 12l7.6-2.8z" stroke-linejoin="round"></path>
+</svg>
+<span class="text-[8.5px] font-medium text-brand-muted leading-none">More<br>for you</span>
+</div>
+</div>
+</section>
+<!-- END: ForYouSection -->
+<!-- BEGIN: FixedBottomNavBar -->
+<nav class="fixed bottom-0 left-0 right-0 max-w-[430px] mx-auto bg-[#FAF8F4]/95 backdrop-blur-md border-t border-brand-border/70 px-6 py-2.5 flex items-center justify-around z-50">
+<!-- Tab 1: HOME (Active) -->
+<a class="flex flex-col items-center gap-1 text-brand-ink group" href="#">
+<svg class="w-5 h-5 fill-brand-ink" viewBox="0 0 24 24">
+<path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"></path>
+</svg>
+<span class="text-[9px] font-bold tracking-widest uppercase text-brand-ink">HOME</span>
+</a>
+<!-- Tab 2: WARDROBE -->
+<a class="flex flex-col items-center gap-1 text-brand-muted hover:text-brand-ink group transition-colors" href="#">
+<svg class="w-5 h-5 stroke-[1.5]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M12 4a3 3 0 0 0-3 3c0 .85.35 1.62.92 2.16L3 17h18l-6.92-7.84A2.99 2.99 0 0 0 15 7a3 3 0 0 0-3-3z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span class="text-[9px] font-medium tracking-widest uppercase text-brand-muted group-hover:text-brand-ink">WARDROBE</span>
+</a>
+<!-- Tab 3: TRY -->
+<a class="flex flex-col items-center gap-1 text-brand-muted hover:text-brand-ink group transition-colors" href="#">
+<svg class="w-5 h-5 stroke-[1.5]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" stroke-linecap="round" stroke-linejoin="round"></path>
+<circle cx="12" cy="13" r="4" stroke-linecap="round" stroke-linejoin="round"></circle>
+</svg>
+<span class="text-[9px] font-medium tracking-widest uppercase text-brand-muted group-hover:text-brand-ink">TRY</span>
+</a>
+<!-- Tab 4: STYLIST -->
+<a class="flex flex-col items-center gap-1 text-brand-muted hover:text-brand-ink group transition-colors" href="#">
+<svg class="w-5 h-5 stroke-[1.5]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span class="text-[9px] font-medium tracking-widest uppercase text-brand-muted group-hover:text-brand-ink">STYLIST</span>
+</a>
+</nav>
+<!-- END: FixedBottomNavBar -->
+</div>
+</body></html>

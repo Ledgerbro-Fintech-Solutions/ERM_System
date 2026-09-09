@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WARDROBE — Create Your Account</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      background-color: #121110;
+      font-family: 'Inter', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 24px 16px;
+      color: #1A1715;
+    }
+
+    .device-viewport {
+      width: 390px;
+      height: 844px;
+      position: relative;
+      background: #FBF9F5;
+      box-shadow: 0 30px 90px rgba(0, 0, 0, 0.65), 0 0 0 1px rgba(255, 255, 255, 0.08);
+      border-radius: 46px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Screen Layering */
+    .hero-container {
+      position: relative;
+      width: 100%;
+      height: 450px;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    .hero-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+    }
+
+    .hero-gradient {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        180deg,
+        rgba(251, 249, 245, 0.25) 0%,
+        rgba(251, 249, 245, 0) 40%,
+        rgba(251, 249, 245, 0.55) 75%,
+        rgba(251, 249, 245, 0.90) 92%,
+        #FBF9F5 100%
+      );
+    }
+
+    .content-container {
+      flex: 1;
+      background: #FBF9F5;
+      padding: 6px 28px 32px 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      z-index: 2;
+    }
+
+    .headline {
+      font-family: 'Bodoni Moda', serif;
+      font-size: 40px;
+      font-weight: 500;
+      line-height: 43px;
+      letter-spacing: -1px;
+      color: #1A1715;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 20px;
+      color: #69655E;
+      max-width: 310px;
+      margin-bottom: 24px;
+    }
+
+    .action-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      width: 100%;
+      height: 52px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.35px;
+      transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+      border: none;
+      outline: none;
+    }
+
+    .btn:active {
+      transform: scale(0.985);
+    }
+
+    .btn-google {
+      background: #1E1C1A;
+      color: #FFFFFF;
+      gap: 12px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .btn-google:hover {
+      background: #141211;
+    }
+
+    .btn-email {
+      background: transparent;
+      color: #383531;
+      border: 1px solid #E1DCD3;
+      gap: 10px;
+    }
+
+    .btn-email:hover {
+      background: rgba(225, 220, 211, 0.2);
+      border-color: #D3CCC0;
+    }
+
+    .sign-in-prompt {
+      text-align: center;
+      font-size: 13px;
+      color: #7A756D;
+      cursor: pointer;
+      padding: 6px 0;
+    }
+
+    .sign-in-link {
+      font-weight: 500;
+      color: #1A1715;
+      text-decoration: underline;
+      text-underline-offset: 4px;
+      text-decoration-color: #7D8B72;
+      transition: color 0.15s ease;
+    }
+
+    .sign-in-link:hover {
+      color: #7D8B72;
+    }
+
+    /* Toast Notification */
+    .toast {
+      position: absolute;
+      bottom: 74px;
+      left: 50%;
+      transform: translateX(-50%) translateY(20px);
+      background: rgba(26, 23, 21, 0.92);
+      color: #FBF9F5;
+      padding: 10px 20px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      z-index: 100;
+      backdrop-filter: blur(8px);
+      white-space: nowrap;
+    }
+
+    .toast.show {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+
+    /* Status Bar Simulation */
+    .status-bar {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 44px;
+      padding: 0 28px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 14px;
+      font-weight: 600;
+      color: #1A1715;
+      z-index: 10;
+      pointer-events: none;
+    }
+
+    .home-indicator {
+      position: absolute;
+      bottom: 8px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 134px;
+      height: 5px;
+      background: #1A1715;
+      border-radius: 10px;
+      opacity: 0.3;
+      z-index: 10;
+    }
+  </style>
+</head>
+<body>
+  <div class="device-viewport">
+    <!-- Status Bar -->
+    <div class="status-bar">
+      <span>9:41</span>
+      <div style="display: flex; gap: 6px; align-items: center;">
+        <svg width="16" height="12" viewBox="0 0 16 12" fill="currentColor"><path d="M1 8.5h2v3H1zm4-3h2v6H5zm4-3h2v9H9zm4-2.5h2v11.5h-2z"/></svg>
+        <svg width="15" height="11" viewBox="0 0 15 11" fill="currentColor"><path d="M7.5 2.5C9.5 2.5 11.3 3.3 12.6 4.6L14 3.2C12.3 1.5 10 0.5 7.5 0.5S2.7 1.5 1 3.2L2.4 4.6C3.7 3.3 5.5 2.5 7.5 2.5zm0 4c1.1 0 2.1.4 2.8 1.2L11.7 6.3C10.6 5.2 9.1 4.5 7.5 4.5S4.4 5.2 3.3 6.3L4.7 7.7C5.4 6.9 6.4 6.5 7.5 6.5zm0 4c.6 0 1-.4 1-1s-.4-1-1-1-1 .4-1 1 .4 1 1 1z"/></svg>
+        <svg width="24" height="12" viewBox="0 0 24 12" fill="currentColor"><rect x="1" y="1" width="19" height="10" rx="3" fill="none" stroke="currentColor" stroke-width="1"/><rect x="3" y="3" width="13" height="6" rx="1.5"/><path d="M21 4.5v3a1.5 1.5 0 001.5-1.5 1.5 1.5 0 00-1.5-1.5z"/></svg>
+      </div>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="hero-container">
+      <img src="create_account_hero.png" alt="WARDROBE fashion model seated in linen suit" class="hero-image" />
+      <div class="hero-gradient"></div>
+    </div>
+
+    <!-- Content & Authentication Section -->
+    <div class="content-container">
+      <div>
+        <h1 class="headline">Create your<br>account.</h1>
+        <p class="subtitle">It only takes a minute. We’ll use this information to personalize your experience and recommendations.</p>
+      </div>
+
+      <div>
+        <div class="action-buttons">
+          <!-- Google Button -->
+          <button class="btn btn-google" onclick="handleAuth('Google')">
+            <svg width="16" height="16" viewBox="0 0 24 24">
+              <path d="M12 5c1.6 0 3 .6 4.1 1.6l3.1-3.1C17.3 1.8 14.8 1 12 1 7.5 1 3.7 3.6 1.9 7.3l3.7 2.9C6.5 7.4 9 5 12 5z" fill="#EA4335"></path>
+              <path d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.6h6.5c-.3 1.5-1.1 2.8-2.4 3.7l3.7 2.9c2.2-2 3.7-5 3.7-8.9z" fill="#4285F4"></path>
+              <path d="M5.6 14.8c-.2-.7-.4-1.5-.4-2.3s.1-1.6.4-2.3L1.9 7.3C.7 9.7 0 12.3 0 15.2s.7 5.5 1.9 7.9l3.7-2.9c-.2-.7-.4-1.5-.4-2.4z" fill="#FBBC05"></path>
+              <path d="M12 23.5c3.2 0 6-1.1 8-3l-3.7-2.9c-1.1.7-2.5 1.2-4.3 1.2-3 0-5.5-2.4-6.4-5.2L1.9 16.5C3.7 20.2 7.5 23.5 12 23.5z" fill="#34A853"></path>
+            </svg>
+            <span>Continue with Google</span>
+          </button>
+
+          <!-- Email Button -->
+          <button class="btn btn-email" onclick="handleAuth('Email')">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#54504A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+            </svg>
+            <span>Continue with Email</span>
+          </button>
+        </div>
+
+        <div class="sign-in-prompt" onclick="handleAuth('Sign In')">
+          Already have an account? <span class="sign-in-link">Sign in</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Home Indicator -->
+    <div class="home-indicator"></div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">Action triggered</div>
+  </div>
+
+  <script>
+    function handleAuth(provider) {
+      const toast = document.getElementById('toast');
+      toast.textContent = 'Selected: Continue with ' + provider;
+      toast.classList.add('show');
+      setTimeout(() => {
+        toast.classList.remove('show');
+      }, 2000);
+    }
+  </script>
+</body>
+</html>

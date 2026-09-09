@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WARDROBE - Onboarding Screen 02 Preview</title>
+  <style>
+    @font-face {
+      font-family: 'Bodoni Moda';
+      src: url('./fonts/bodoni_moda_regular.ttf') format('truetype');
+      font-weight: 400;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: 'Bodoni Moda';
+      src: url('./fonts/bodoni_moda_italic.ttf') format('truetype');
+      font-weight: 400;
+      font-style: italic;
+    }
+    @font-face {
+      font-family: 'Inter';
+      src: url('./fonts/inter_regular.otf') format('opentype');
+      font-weight: 400;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: 'Inter';
+      src: url('./fonts/inter_semibold.otf') format('opentype');
+      font-weight: 600;
+      font-style: normal;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      user-select: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      background-color: #12100E;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      font-family: 'Inter', -apple-system, sans-serif;
+    }
+
+    .device-shell {
+      position: relative;
+      width: 390px;
+      height: 844px;
+      background: #FBF9F5;
+      border-radius: 44px;
+      overflow: hidden;
+      box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(255, 255, 255, 0.08);
+    }
+
+    .hero-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 30%;
+      z-index: 1;
+    }
+
+    /* Top subtle gradient */
+    .scrim-top {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 160px;
+      background: linear-gradient(180deg, rgba(251, 249, 245, 0.7) 0%, rgba(251, 249, 245, 0.3) 50%, rgba(251, 249, 245, 0) 100%);
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    /* Bottom ivory fade */
+    .scrim-bottom {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 380px;
+      background: linear-gradient(0deg, #FBF9F5 0%, rgba(251, 249, 245, 0.85) 45%, rgba(251, 249, 245, 0) 100%);
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    /* Overlay Cards Container */
+    .overlays-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 3;
+      pointer-events: none;
+    }
+
+    /* YOUR COLORS Overlay Card */
+    .card-colors {
+      position: absolute;
+      left: 24px;
+      top: 58px;
+      width: 158px;
+      height: 70px;
+      background: rgba(251, 249, 245, 0.75);
+      border: 1px solid rgba(255, 255, 255, 0.65);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-radius: 16px;
+      padding: 12px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 0px 8px 32px -4px rgba(60, 48, 38, 0.08), 0px 2px 8px rgba(0, 0, 0, 0.03);
+    }
+
+    .card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .card-title {
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+      color: rgba(26, 23, 21, 0.8);
+    }
+
+    .dot-terracotta {
+      width: 6px;
+      height: 6px;
+      background-color: #C06C54;
+      border-radius: 50%;
+    }
+
+    .dot-olive {
+      width: 6px;
+      height: 6px;
+      background-color: #7D8B72;
+      border-radius: 50%;
+    }
+
+    .swatches-row {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+    .swatch {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      border: 1px solid rgba(255, 255, 255, 0.85);
+      box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+    }
+
+    /* STYLE MATCH Overlay Card */
+    .card-style-match {
+      position: absolute;
+      right: 20px;
+      top: 135px;
+      width: 152px;
+      height: 98px;
+      background: rgba(251, 249, 245, 0.75);
+      border: 1px solid rgba(255, 255, 255, 0.65);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-radius: 16px;
+      padding: 12px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 0px 8px 32px -4px rgba(60, 48, 38, 0.08), 0px 2px 8px rgba(0, 0, 0, 0.03);
+    }
+
+    .style-match-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    /* 92% Gauge */
+    .gauge-container {
+      position: relative;
+      width: 44px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .gauge-svg {
+      width: 44px;
+      height: 44px;
+      transform: rotate(-90deg);
+    }
+
+    .gauge-track {
+      fill: none;
+      stroke: #E5E0D6;
+      stroke-width: 3.5;
+    }
+
+    .gauge-progress {
+      fill: none;
+      stroke: #7D8B72;
+      stroke-width: 3.5;
+      stroke-linecap: round;
+      stroke-dasharray: 126; /* 2 * PI * 20 */
+      stroke-dashoffset: 10; /* 92% filled */
+    }
+
+    .gauge-text {
+      position: absolute;
+      display: flex;
+      align-items: baseline;
+      font-weight: 700;
+      font-size: 12px;
+      color: #1A1715;
+      letter-spacing: -0.3px;
+    }
+
+    .gauge-pct {
+      font-size: 8px;
+      font-weight: 400;
+      color: #78716C;
+    }
+
+    /* Checklist */
+    .checklist {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      padding-left: 6px;
+    }
+
+    .check-item {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 9px;
+      font-weight: 500;
+      color: rgba(26, 23, 21, 0.9);
+    }
+
+    .check-icon {
+      width: 10px;
+      height: 10px;
+      stroke: #7D8B72;
+      stroke-width: 1.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      fill: none;
+    }
+
+    /* Bottom Punchline Area */
+    .bottom-punchline {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 4;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 0 24px 34px 24px;
+      gap: 16px;
+    }
+
+    .editorial-headline {
+      font-family: 'Bodoni Moda', serif;
+      font-size: 38px;
+      line-height: 41px;
+      color: #1A1715;
+      letter-spacing: -0.95px;
+      font-weight: 400;
+    }
+
+    .editorial-headline .italic {
+      font-style: italic;
+    }
+
+    .supporting-statement {
+      font-family: 'Inter', sans-serif;
+      font-size: 13.5px;
+      line-height: 22px;
+      color: #78716C;
+      max-width: 280px;
+    }
+
+    /* 3-segment Indicator */
+    .indicator-container {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding-top: 2px;
+    }
+
+    .indicator-segment {
+      height: 4px;
+      border-radius: 9999px;
+    }
+
+    .indicator-segment.inactive {
+      width: 24px;
+      background-color: #E5E0D6;
+    }
+
+    .indicator-segment.active {
+      width: 32px;
+      background-color: #7D8B72;
+      box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+    }
+
+    .meta-bar {
+      margin-top: 18px;
+      color: #A8A29E;
+      font-size: 13px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .meta-tag {
+      background: rgba(255, 255, 255, 0.08);
+      padding: 4px 10px;
+      border-radius: 6px;
+      color: #E7E5E4;
+      font-size: 12px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="device-shell">
+    <img class="hero-image" src="./onboarding_02_background.png" alt="WARDROBE Editorial Models">
+    <div class="scrim-top"></div>
+    <div class="scrim-bottom"></div>
+
+    <div class="overlays-container">
+      <!-- 1. YOUR COLORS Overlay -->
+      <div class="card-colors">
+        <div class="card-header">
+          <span class="card-title">YOUR COLORS</span>
+          <span class="dot-terracotta"></span>
+        </div>
+        <div class="swatches-row">
+          <div class="swatch" style="background-color: #EDE5D8;"></div>
+          <div class="swatch" style="background-color: #C79D74;"></div>
+          <div class="swatch" style="background-color: #B86851;"></div>
+          <div class="swatch" style="background-color: #6E7B65;"></div>
+          <div class="swatch" style="background-color: #46362C;"></div>
+        </div>
+      </div>
+
+      <!-- 2. STYLE MATCH Overlay -->
+      <div class="card-style-match">
+        <div class="card-header">
+          <span class="card-title">STYLE MATCH</span>
+          <span class="dot-olive"></span>
+        </div>
+        <div class="style-match-content">
+          <div class="gauge-container">
+            <svg class="gauge-svg" viewBox="0 0 44 44">
+              <circle class="gauge-track" cx="22" cy="22" r="19"></circle>
+              <circle class="gauge-progress" cx="22" cy="22" r="19"></circle>
+            </svg>
+            <div class="gauge-text">
+              <span>92</span><span class="gauge-pct">%</span>
+            </div>
+          </div>
+          <div class="checklist">
+            <div class="check-item">
+              <svg class="check-icon" viewBox="0 0 10 10">
+                <polyline points="2 5 4.2 7.5 8.5 2.5"></polyline>
+              </svg>
+              <span>Color</span>
+            </div>
+            <div class="check-item">
+              <svg class="check-icon" viewBox="0 0 10 10">
+                <polyline points="2 5 4.2 7.5 8.5 2.5"></polyline>
+              </svg>
+              <span>Fit</span>
+            </div>
+            <div class="check-item">
+              <svg class="check-icon" viewBox="0 0 10 10">
+                <polyline points="2 5 4.2 7.5 8.5 2.5"></polyline>
+              </svg>
+              <span>Style</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Editorial Message -->
+    <div class="bottom-punchline">
+      <h1 class="editorial-headline">
+        Smarter choices.<br>
+        <span class="italic">Better looks.</span>
+      </h1>
+      <p class="supporting-statement">
+        Personalized style, powered by you.
+      </p>
+      <div class="indicator-container" aria-label="Step 2 of 3">
+        <div class="indicator-segment inactive"></div>
+        <div class="indicator-segment active"></div>
+        <div class="indicator-segment inactive"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="meta-bar">
+    <span>Viewport: 390 × 844 px</span>
+    <span class="meta-tag">Onboarding 02 (Colors & Style Match)</span>
+    <span>Zero Emulator / Zero Phone Needed</span>
+  </div>
+
+</body>
+</html>

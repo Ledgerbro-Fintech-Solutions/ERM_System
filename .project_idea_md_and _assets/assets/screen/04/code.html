@@ -1,0 +1,118 @@
+<!DOCTYPE html><html lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Wardrobe - Create Your Account</title>
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts: Playfair Display for editorial serif, Inter for sans-serif -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              ivory: '#FBF9F5',
+              dark: '#1A1715',
+              terracotta: '#C06C54',
+              border: '#E5E0D6',
+              muted: '#6E6B65',
+              olive: '#7D8B72'
+            }
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+<style data-purpose="base-styling">
+    body {
+      background-color: #F3EFEA;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    .editorial-title {
+      font-family: 'Playfair Display', serif;
+      letter-spacing: -0.02em;
+      line-height: 1.08;
+    }
+  </style>
+</head>
+<body class="flex items-center justify-center min-h-screen p-0 sm:p-4">
+<!-- BEGIN: MobileContainer -->
+<!-- Constrained device mockup frame for mobile iOS presentation -->
+<main class="w-full max-w-[420px] min-h-[844px] bg-[#FBF9F5] flex flex-col relative overflow-hidden shadow-2xl sm:rounded-[40px]" data-purpose="mobile-screen-wrapper">
+<!-- BEGIN: HeroSection -->
+<section class="relative w-full h-[54vh] min-h-[440px] overflow-hidden flex flex-col" data-purpose="editorial-hero">
+<!-- Background Editorial Photography cropped nicely -->
+<img alt="Editorial fashion model seated" class="absolute inset-0 w-full h-full object-cover object-top" src="https://lh3.googleusercontent.com/aida/AEtjO1U8N1BtE9x0QhvAXsSm9OXNn09KXL91MnKHCyt9lNxaLuEO5bMjgud5UxrMB-NKCSvU9pByP2BN4hbhQ0aJDY2TGF6Cpzy3OjO07_1CbuqcsGTb_vP_3H2oTG5j6UEy9J_LB4oV8J6FGRVsscLJLNN2VCsZPjAwazsXwr8MbHmi-j-IDZUX7t5Dzf_PIL-jP7q7UPs_92Ec8VBtdlm1YvFKXksSxsCAiXtzgNZ6YEtrh62PXObWBCZ9yZ_l">
+<!-- Soft gradient overlay ensuring bottom copy blends seamlessly into the ivory background -->
+<div aria-hidden="true" class="absolute inset-0 bg-gradient-to-b from-[#FBF9F5]/30 via-transparent to-[#FBF9F5]"></div>
+<!-- BEGIN: TopBranding -->
+<!-- Luxury minimal brand header -->
+
+<!-- END: TopBranding -->
+<!-- BEGIN: FeatureAnnotation -->
+<!-- Editorial copy overlay placed on upper left with custom pointer line -->
+
+<!-- END: FeatureAnnotation -->
+</section>
+<!-- END: HeroSection -->
+<!-- BEGIN: BottomContentSection -->
+<!-- Signup actions and editorial copy -->
+<section class="relative z-10 flex-1 flex flex-col justify-between px-7 pt-2 pb-8 bg-[#FBF9F5]" data-purpose="auth-options">
+<div>
+<!-- Editorial Serif Headline -->
+<h2 class="editorial-title text-[40px] font-medium text-brand-dark tracking-tight leading-[1.08] mb-3">
+          Create your<br>account.
+        </h2>
+<!-- Explanatory Subtitle -->
+<p class="text-[14px] leading-[1.45] text-[#69655E] max-w-[310px] mb-7 font-normal">
+          It only takes a minute. We’ll use this information to personalize your experience and recommendations.
+        </p>
+<!-- BEGIN: ActionButtons -->
+<div class="space-y-3" data-purpose="authentication-buttons">
+<!-- Primary: Continue with Google -->
+<button class="w-full h-[52px] bg-[#1E1C1A] active:bg-black text-white rounded-xl flex items-center justify-center gap-3 px-4 shadow-sm transition-all duration-150 hover:opacity-95" data-purpose="google-auth-button" type="button">
+<!-- Google Logo Icon -->
+<svg aria-hidden="true" class="w-4 h-4 shrink-0" viewBox="0 0 24 24">
+<path d="M12 5c1.6 0 3 .6 4.1 1.6l3.1-3.1C17.3 1.8 14.8 1 12 1 7.5 1 3.7 3.6 1.9 7.3l3.7 2.9C6.5 7.4 9 5 12 5z" fill="#EA4335"></path>
+<path d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.6h6.5c-.3 1.5-1.1 2.8-2.4 3.7l3.7 2.9c2.2-2 3.7-5 3.7-8.9z" fill="#4285F4"></path>
+<path d="M5.6 14.8c-.2-.7-.4-1.5-.4-2.3s.1-1.6.4-2.3L1.9 7.3C.7 9.7 0 12.3 0 15.2s.7 5.5 1.9 7.9l3.7-2.9c-.2-.7-.4-1.5-.4-2.4z" fill="#FBBC05"></path>
+<path d="M12 23.5c3.2 0 6-1.1 8-3l-3.7-2.9c-1.1.7-2.5 1.2-4.3 1.2-3 0-5.5-2.4-6.4-5.2L1.9 16.5C3.7 20.2 7.5 23.5 12 23.5z" fill="#34A853"></path>
+</svg>
+<span class="text-[14px] font-medium tracking-wide">Continue with Google</span>
+</button>
+<!-- Secondary: Continue with Email -->
+<button class="w-full h-[52px] bg-transparent border border-[#E1DCD3] active:bg-[#F3EFEA] text-brand-dark rounded-xl flex items-center justify-center gap-2.5 px-4 transition-all duration-150 hover:border-[#D1C9BC]" data-purpose="email-auth-button" type="button">
+<!-- Mail Outline Icon -->
+<svg aria-hidden="true" class="w-4 h-4 text-[#54504A]" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+<path d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span class="text-[14px] font-medium tracking-wide text-[#383531]">Continue with Email</span>
+</button>
+</div>
+<!-- END: ActionButtons -->
+</div>
+<!-- BEGIN: FooterSignInLink -->
+<div class="pt-6 pb-2 text-center" data-purpose="sign-in-prompt">
+<p class="text-[13px] text-[#7A756D]">
+          Already have an account? 
+          <a class="font-medium text-brand-dark underline underline-offset-4 decoration-[#7D8B72] hover:opacity-80 transition-opacity" href="#signin">
+            Sign in
+          </a>
+</p>
+</div>
+<!-- END: FooterSignInLink -->
+</section>
+<!-- END: BottomContentSection -->
+</main>
+<!-- END: MobileContainer -->
+
+
+</body></html>

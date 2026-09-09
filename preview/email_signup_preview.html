@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WARDROBE — Create Account with Email</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      background-color: #121110;
+      font-family: 'Inter', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 24px 16px;
+      color: #1A1715;
+    }
+
+    .device-viewport {
+      width: 390px;
+      height: 844px;
+      position: relative;
+      background: #FBF9F5;
+      box-shadow: 0 30px 90px rgba(0, 0, 0, 0.65), 0 0 0 1px rgba(255, 255, 255, 0.08);
+      border-radius: 46px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .scroll-container {
+      width: 100%;
+      height: 100%;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      scrollbar-width: none;
+    }
+    .scroll-container::-webkit-scrollbar {
+      display: none;
+    }
+
+    /* Hero Section */
+    .hero-container {
+      position: relative;
+      width: 100%;
+      height: 450px;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    .hero-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+    }
+
+    .hero-gradient {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        180deg,
+        rgba(251, 249, 245, 0.20) 0%,
+        rgba(251, 249, 245, 0) 35%,
+        rgba(251, 249, 245, 0.50) 68%,
+        rgba(251, 249, 245, 0.88) 88%,
+        #FBF9F5 100%
+      );
+    }
+
+    /* Content & Form Section */
+    .content-container {
+      flex: 1;
+      background: #FBF9F5;
+      padding: 0 28px 28px 28px;
+      display: flex;
+      flex-direction: column;
+      z-index: 2;
+    }
+
+    .headline {
+      font-family: 'Bodoni Moda', serif;
+      font-size: 38px;
+      font-weight: 500;
+      line-height: 42px;
+      letter-spacing: -1px;
+      color: #1A1715;
+      margin-bottom: 8px;
+    }
+
+    .subtitle {
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 20px;
+      color: #78716C;
+      max-width: 320px;
+      margin-bottom: 22px;
+    }
+
+    /* Form Fields */
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 14px;
+    }
+
+    .field-label {
+      font-size: 10.5px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      color: #5A5652;
+      margin-bottom: 6px;
+      text-transform: uppercase;
+    }
+
+    .field-box {
+      width: 100%;
+      height: 52px;
+      border-radius: 12px;
+      border: 1px solid #E5E0D6;
+      background: #FBF9F5;
+      display: flex;
+      align-items: center;
+      padding: 0 16px;
+      transition: all 0.2s ease;
+    }
+
+    .field-box:focus-within {
+      border-color: #7D8B72;
+      box-shadow: 0 0 0 1px #7D8B72;
+    }
+
+    .field-box.error {
+      border-color: #C06C54;
+    }
+
+    .field-input {
+      flex: 1;
+      height: 100%;
+      background: transparent;
+      border: none;
+      outline: none;
+      font-family: 'Inter', sans-serif;
+      font-size: 14.5px;
+      color: #1A1715;
+    }
+
+    .field-input::placeholder {
+      color: rgba(120, 113, 108, 0.6);
+    }
+
+    .btn-toggle-pwd {
+      background: transparent;
+      border: none;
+      outline: none;
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      color: #5A5652;
+      cursor: pointer;
+      padding: 4px;
+      margin-left: 8px;
+    }
+
+    .field-error {
+      font-size: 12px;
+      color: #C06C54;
+      margin-top: 4px;
+      padding-left: 2px;
+      display: none;
+    }
+    .field-error.show {
+      display: block;
+    }
+
+    /* Primary CTA */
+    .btn-cta {
+      width: 100%;
+      height: 52px;
+      border-radius: 26px;
+      background: #7D8B72;
+      color: #FFFFFF;
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      border: none;
+      outline: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      cursor: pointer;
+      margin-top: 8px;
+      margin-bottom: 20px;
+      box-shadow: 0 6px 18px rgba(26, 23, 21, 0.12);
+      transition: all 0.15s ease;
+    }
+
+    .btn-cta:active {
+      transform: scale(0.982);
+    }
+
+    .btn-cta:hover {
+      background: #6F7D65;
+    }
+
+    .sign-in-prompt {
+      text-align: center;
+      font-size: 13px;
+      color: #78716C;
+      cursor: pointer;
+      padding: 4px 0;
+    }
+
+    .sign-in-link {
+      font-weight: 500;
+      color: #1A1715;
+      text-decoration: underline;
+      text-underline-offset: 4px;
+      text-decoration-color: #7D8B72;
+      transition: color 0.15s ease;
+    }
+
+    .sign-in-link:hover {
+      color: #7D8B72;
+    }
+
+    /* Toast */
+    .toast {
+      position: absolute;
+      bottom: 74px;
+      left: 50%;
+      transform: translateX(-50%) translateY(20px);
+      background: rgba(26, 23, 21, 0.92);
+      color: #FBF9F5;
+      padding: 10px 20px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      z-index: 100;
+      backdrop-filter: blur(8px);
+      white-space: nowrap;
+    }
+
+    .toast.show {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+
+    .status-bar {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 44px;
+      padding: 0 28px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 14px;
+      font-weight: 600;
+      color: #1A1715;
+      z-index: 10;
+      pointer-events: none;
+    }
+
+    .home-indicator {
+      position: absolute;
+      bottom: 8px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 134px;
+      height: 5px;
+      background: #1A1715;
+      border-radius: 10px;
+      opacity: 0.3;
+      z-index: 10;
+    }
+  </style>
+</head>
+<body>
+  <div class="device-viewport">
+    <!-- Status Bar -->
+    <div class="status-bar">
+      <span>9:41</span>
+      <div style="display: flex; gap: 6px; align-items: center;">
+        <svg width="16" height="12" viewBox="0 0 16 12" fill="currentColor"><path d="M1 8.5h2v3H1zm4-3h2v6H5zm4-3h2v9H9zm4-2.5h2v11.5h-2z"/></svg>
+        <svg width="15" height="11" viewBox="0 0 15 11" fill="currentColor"><path d="M7.5 2.5C9.5 2.5 11.3 3.3 12.6 4.6L14 3.2C12.3 1.5 10 0.5 7.5 0.5S2.7 1.5 1 3.2L2.4 4.6C3.7 3.3 5.5 2.5 7.5 2.5zm0 4c1.1 0 2.1.4 2.8 1.2L11.7 6.3C10.6 5.2 9.1 4.5 7.5 4.5S4.4 5.2 3.3 6.3L4.7 7.7C5.4 6.9 6.4 6.5 7.5 6.5zm0 4c.6 0 1-.4 1-1s-.4-1-1-1-1 .4-1 1 .4 1 1 1z"/></svg>
+        <svg width="24" height="12" viewBox="0 0 24 12" fill="currentColor"><rect x="1" y="1" width="19" height="10" rx="3" fill="none" stroke="currentColor" stroke-width="1"/><rect x="3" y="3" width="13" height="6" rx="1.5"/><path d="M21 4.5v3a1.5 1.5 0 001.5-1.5 1.5 1.5 0 00-1.5-1.5z"/></svg>
+      </div>
+    </div>
+
+    <!-- Scrollable Content Frame -->
+    <div class="scroll-container">
+      <!-- Hero Section -->
+      <div class="hero-container">
+        <img src="create_account_hero.png" alt="WARDROBE fashion model seated in linen suit" class="hero-image" />
+        <div class="hero-gradient"></div>
+      </div>
+
+      <!-- Authentication Form Section -->
+      <div class="content-container">
+        <h1 class="headline">Create your<br>account.</h1>
+        <p class="subtitle">Create your account to save your style profile and get personalized recommendations.</p>
+
+        <!-- Form Fields -->
+        <div class="form-group">
+          <label class="field-label" for="email">EMAIL ADDRESS</label>
+          <div class="field-box" id="email-box">
+            <input type="email" id="email" class="field-input" placeholder="Enter your email" autocomplete="email" />
+          </div>
+          <span class="field-error" id="email-error">Enter a valid email address</span>
+        </div>
+
+        <div class="form-group">
+          <label class="field-label" for="password">PASSWORD</label>
+          <div class="field-box" id="password-box">
+            <input type="password" id="password" class="field-input" placeholder="Create a password" autocomplete="new-password" />
+            <button type="button" class="btn-toggle-pwd" onclick="togglePassword('password', this)">SHOW</button>
+          </div>
+          <span class="field-error" id="password-error">Use at least 6 characters</span>
+        </div>
+
+        <div class="form-group">
+          <label class="field-label" for="confirm-password">CONFIRM PASSWORD</label>
+          <div class="field-box" id="confirm-box">
+            <input type="password" id="confirm-password" class="field-input" placeholder="Re-enter your password" autocomplete="new-password" />
+            <button type="button" class="btn-toggle-pwd" onclick="togglePassword('confirm-password', this)">SHOW</button>
+          </div>
+          <span class="field-error" id="confirm-error">Passwords don't match</span>
+        </div>
+
+        <!-- Primary CTA -->
+        <button class="btn-cta" onclick="submitForm()">
+          <span>CREATE ACCOUNT</span>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M6 3.5L10.5 8L6 12.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+
+        <!-- Sign-In Prompt -->
+        <div class="sign-in-prompt" onclick="showToast('Navigating to Sign In...')">
+          Already have an account? <span class="sign-in-link">Sign in</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Home Indicator -->
+    <div class="home-indicator"></div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">Action triggered</div>
+  </div>
+
+  <script>
+    function togglePassword(fieldId, btn) {
+      const input = document.getElementById(fieldId);
+      if (input.type === 'password') {
+        input.type = 'text';
+        btn.textContent = 'HIDE';
+      } else {
+        input.type = 'password';
+        btn.textContent = 'SHOW';
+      }
+    }
+
+    function submitForm() {
+      const email = document.getElementById('email').value.trim();
+      const password = document.getElementById('password').value;
+      const confirm = document.getElementById('confirm-password').value;
+
+      let valid = true;
+
+      // Email check
+      const emailBox = document.getElementById('email-box');
+      const emailErr = document.getElementById('email-error');
+      if (!email || !email.includes('@') || !email.includes('.')) {
+        emailBox.classList.add('error');
+        emailErr.classList.add('show');
+        valid = false;
+      } else {
+        emailBox.classList.remove('error');
+        emailErr.classList.remove('show');
+      }
+
+      // Password check
+      const pwdBox = document.getElementById('password-box');
+      const pwdErr = document.getElementById('password-error');
+      if (password.length < 6) {
+        pwdBox.classList.add('error');
+        pwdErr.classList.add('show');
+        valid = false;
+      } else {
+        pwdBox.classList.remove('error');
+        pwdErr.classList.remove('show');
+      }
+
+      // Confirm check
+      const confBox = document.getElementById('confirm-box');
+      const confErr = document.getElementById('confirm-error');
+      if (confirm !== password) {
+        confBox.classList.add('error');
+        confErr.classList.add('show');
+        valid = false;
+      } else {
+        confBox.classList.remove('error');
+        confErr.classList.remove('show');
+      }
+
+      if (valid) {
+        showToast('Account created successfully for ' + email);
+      }
+    }
+
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      toast.textContent = msg;
+      toast.classList.add('show');
+      setTimeout(() => {
+        toast.classList.remove('show');
+      }, 2500);
+    }
+  </script>
+</body>
+</html>

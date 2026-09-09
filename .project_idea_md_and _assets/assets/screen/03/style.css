@@ -1,0 +1,1068 @@
+/* WARDROBE - Dress for the Moment */
+
+position: relative;
+width: 390px;
+height: 895.41px;
+overflow-y: scroll;
+
+background: linear-gradient(0deg, #FBF9F5, #FBF9F5), linear-gradient(0deg, #FAF8F5, #FAF8F5), #FFFFFF;
+box-shadow: 0px 25px 50px -12px rgba(0, 0, 0, 0.25);
+
+
+/* Main - Central visual area showing the base model and surrounding occasion context pins */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 0px;
+isolation: isolate;
+
+position: absolute;
+min-height: 580px;
+left: 0px;
+right: 0px;
+top: 0px;
+bottom: 267.41px;
+
+
+
+/* Central Full-Body Model Anchor */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 0px;
+
+width: 310px;
+height: 550px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+z-index: 0;
+
+
+/* ChatGPT Image Sep 9, 2026, 05_48_39 PM 1 */
+
+width: 389px;
+height: 844px;
+
+background: url(ChatGPT Image Sep 9, 2026, 05_48_39 PM.png);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* SVG - Elegant curved bezier connector lines bridging thumbnails to central model */
+
+position: absolute;
+left: 0px;
+right: 0px;
+top: 0px;
+bottom: 0px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+z-index: 1;
+
+
+/* Vector */
+
+position: absolute;
+left: 28.84%;
+right: 62.79%;
+top: 20.91%;
+bottom: 75.65%;
+
+border: 0.906977px solid #C9C2B7;
+
+
+/* Vector */
+
+position: absolute;
+left: 36.74%;
+right: 62.33%;
+top: 24.04%;
+bottom: 75.33%;
+
+background: #B2A99D;
+
+
+/* Vector */
+
+position: absolute;
+left: 61.4%;
+right: 28.84%;
+top: 22.17%;
+bottom: 73.77%;
+
+border: 0.906977px solid #C9C2B7;
+
+
+/* Vector */
+
+position: absolute;
+left: 60.93%;
+right: 38.14%;
+top: 25.92%;
+bottom: 73.46%;
+
+background: #B2A99D;
+
+
+/* Vector */
+
+position: absolute;
+left: 28.37%;
+right: 63.26%;
+top: 43.28%;
+bottom: 55%;
+
+border: 0.906977px solid #C9C2B7;
+
+
+/* Vector */
+
+position: absolute;
+left: 36.28%;
+right: 62.79%;
+top: 42.96%;
+bottom: 56.41%;
+
+background: #B2A99D;
+
+
+/* Vector */
+
+position: absolute;
+left: 61.86%;
+right: 28.37%;
+top: 42.81%;
+bottom: 54.53%;
+
+border: 0.906977px solid #C9C2B7;
+
+
+/* Vector */
+
+position: absolute;
+left: 61.4%;
+right: 37.67%;
+top: 45.15%;
+bottom: 54.22%;
+
+background: #B2A99D;
+
+
+/* Section - Work Occasion Look */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 6px;
+isolation: isolate;
+
+position: absolute;
+width: 106px;
+height: 156.66px;
+left: 16px;
+top: 8px;
+
+background: rgba(255, 255, 255, 0.65);
+border: 1px solid rgba(255, 255, 255, 0.9);
+backdrop-filter: blur(5px);
+/* Note: backdrop-filter has minimal browser support */
+border-radius: 16px;
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+z-index: 2;
+
+
+/* Section - Work Occasion Look:shadow */
+
+position: absolute;
+width: 106px;
+left: 0px;
+top: 0px;
+bottom: -0.5px;
+
+background: rgba(255, 255, 255, 0.002);
+box-shadow: 0px 8px 24px -4px rgba(140, 130, 120, 0.12), 0px 2px 6px -1px rgba(140, 130, 120, 0.08);
+border-radius: 16px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+z-index: 0;
+
+
+/* Card Header Info */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 2px 4px 4px;
+gap: 4px;
+
+width: 92px;
+height: 20px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+z-index: 1;
+
+
+/* Container */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+padding: 0px;
+gap: 26.8px;
+
+width: 84px;
+height: 14px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Container */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 33.2px;
+height: 14px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Text */
+
+width: 33.2px;
+height: 14px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 9px;
+line-height: 14px;
+/* identical to box height, or 150% */
+display: flex;
+align-items: center;
+letter-spacing: 1.26px;
+text-transform: uppercase;
+
+color: #524E48;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Card Image Thumbnail */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+padding: 0px;
+
+width: 92px;
+height: 122.66px;
+
+background: #EAE6DF;
+border-radius: 11px;
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+z-index: 2;
+
+
+/* Work tailored suit styling */
+
+width: 92px;
+height: 122.66px;
+
+background: url(.jpg);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Section - Casual Occasion Look */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 6px;
+isolation: isolate;
+
+position: absolute;
+width: 106px;
+height: 156.66px;
+right: 16px;
+top: 16px;
+
+background: rgba(255, 255, 255, 0.65);
+border: 1px solid rgba(255, 255, 255, 0.9);
+backdrop-filter: blur(5px);
+/* Note: backdrop-filter has minimal browser support */
+border-radius: 16px;
+
+/* Inside auto layout */
+flex: none;
+order: 3;
+flex-grow: 0;
+z-index: 3;
+
+
+/* Section - Casual Occasion Look:shadow */
+
+position: absolute;
+width: 106px;
+right: 0px;
+top: 0px;
+bottom: -0.5px;
+
+background: rgba(255, 255, 255, 0.002);
+box-shadow: 0px 8px 24px -4px rgba(140, 130, 120, 0.12), 0px 2px 6px -1px rgba(140, 130, 120, 0.08);
+border-radius: 16px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+z-index: 0;
+
+
+/* Card Header Info */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 2px 4px 4px;
+gap: 4px;
+
+width: 92px;
+height: 20px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+z-index: 1;
+
+
+/* Container */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+padding: 0px;
+gap: 19.62px;
+
+width: 84px;
+height: 14px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Container */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 44.38px;
+height: 14px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Text */
+
+width: 44.38px;
+height: 14px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 9px;
+line-height: 14px;
+/* identical to box height, or 150% */
+display: flex;
+align-items: center;
+letter-spacing: 1.26px;
+text-transform: uppercase;
+
+color: #524E48;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Card Image Thumbnail */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+padding: 0px;
+
+width: 92px;
+height: 122.66px;
+
+background: #EAE6DF;
+border-radius: 11px;
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+z-index: 2;
+
+
+/* Casual olive shirt and linen trousers styling */
+
+width: 92px;
+height: 122.66px;
+
+background: url(.jpg);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Section - Wedding Occasion Look */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 6px;
+isolation: isolate;
+
+position: absolute;
+width: 106px;
+height: 156.66px;
+left: 16px;
+bottom: 56px;
+
+background: rgba(255, 255, 255, 0.65);
+border: 1px solid rgba(255, 255, 255, 0.9);
+backdrop-filter: blur(5px);
+/* Note: backdrop-filter has minimal browser support */
+border-radius: 16px;
+
+/* Inside auto layout */
+flex: none;
+order: 4;
+flex-grow: 0;
+z-index: 4;
+
+
+/* Section - Wedding Occasion Look:shadow */
+
+position: absolute;
+width: 106px;
+left: 0px;
+top: 0px;
+bottom: -0.5px;
+
+background: rgba(255, 255, 255, 0.002);
+box-shadow: 0px 8px 24px -4px rgba(140, 130, 120, 0.12), 0px 2px 6px -1px rgba(140, 130, 120, 0.08);
+border-radius: 16px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+z-index: 0;
+
+
+/* Card Header Info */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 2px 4px 4px;
+gap: 4px;
+
+width: 92px;
+height: 20px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+z-index: 1;
+
+
+/* Container */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+padding: 0px;
+gap: 15.48px;
+
+width: 84px;
+height: 14px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Container */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 52.52px;
+height: 14px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Text */
+
+width: 52.52px;
+height: 14px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 9px;
+line-height: 14px;
+/* identical to box height, or 150% */
+display: flex;
+align-items: center;
+letter-spacing: 1.26px;
+text-transform: uppercase;
+
+color: #524E48;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Card Image Thumbnail */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+padding: 0px;
+
+width: 92px;
+height: 122.66px;
+
+background: #EAE6DF;
+border-radius: 11px;
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+z-index: 2;
+
+
+/* Terracotta silk slip dress styling for weddings */
+
+width: 92px;
+height: 122.66px;
+
+background: url(.jpg);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Section - Night Out Occasion Look */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 6px;
+isolation: isolate;
+
+position: absolute;
+width: 106px;
+height: 155.66px;
+right: 16px;
+bottom: 64px;
+
+background: rgba(255, 255, 255, 0.65);
+border: 1px solid rgba(255, 255, 255, 0.9);
+backdrop-filter: blur(5px);
+/* Note: backdrop-filter has minimal browser support */
+border-radius: 16px;
+
+/* Inside auto layout */
+flex: none;
+order: 5;
+flex-grow: 0;
+z-index: 5;
+
+
+/* Section - Night Out Occasion Look:shadow */
+
+position: absolute;
+width: 106px;
+right: 0px;
+top: 0px;
+bottom: -0.75px;
+
+background: rgba(255, 255, 255, 0.002);
+box-shadow: 0px 8px 24px -4px rgba(140, 130, 120, 0.12), 0px 2px 6px -1px rgba(140, 130, 120, 0.08);
+border-radius: 16px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+z-index: 0;
+
+
+/* Card Header Info */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 2px 4px 4px;
+gap: 4px;
+
+width: 92px;
+height: 19px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+z-index: 1;
+
+
+/* Container */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+padding: 0px;
+gap: 13.16px;
+
+width: 84px;
+height: 13px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Container */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 56.84px;
+height: 13px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Text */
+
+width: 56.84px;
+height: 13px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 8.5px;
+line-height: 13px;
+/* identical to box height, or 150% */
+display: flex;
+align-items: center;
+letter-spacing: 1.02px;
+text-transform: uppercase;
+
+color: #524E48;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Card Image Thumbnail */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+padding: 0px;
+
+width: 92px;
+height: 122.66px;
+
+background: #EAE6DF;
+border-radius: 11px;
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+z-index: 2;
+
+
+/* Dark fluid evening halter and trousers styling */
+
+width: 92px;
+height: 122.66px;
+
+background: url(.jpg);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Footer - Editorial typographic anchor and discover action cues */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 8px 24px 1px;
+gap: 6px;
+
+position: absolute;
+height: 154px;
+left: 0px;
+right: 0px;
+top: 702px;
+
+
+
+/* Heading 2 - Primary Editorial Title:margin */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px 0px 12px;
+
+width: 353px;
+height: 94px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Heading 2 - Primary Editorial Title */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 0px;
+
+width: 353px;
+height: 82px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* From your wardrobe to your best look. */
+
+width: 353px;
+height: 82px;
+
+font-family: 'Bodoni Moda';
+font-style: normal;
+font-weight: 400;
+font-size: 38px;
+line-height: 41px;
+/* or 108% */
+display: flex;
+align-items: center;
+text-align: center;
+letter-spacing: -0.31px;
+
+color: #1A1715;
+font-variation-settings: 'opsz' 31;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Narrative Subtitle:margin */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px 0px 16px;
+
+width: 180.54px;
+max-width: 270px;
+height: 36px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Narrative Subtitle */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 0px 14.77px;
+
+width: 180.54px;
+max-width: 270px;
+height: 20px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* AI that understands you. */
+
+width: 151px;
+height: 20px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 13px;
+line-height: 20px;
+/* identical to box height, or 150% */
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #78716C;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Bottom Progress Indicator (3 / 3 with 3rd bar active) */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 0px;
+gap: 8px;
+
+position: absolute;
+width: 96px;
+height: 3px;
+left: 147px;
+top: 856px;
+
+
+
+/* Onboarding step 3 of 3 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 6px;
+
+width: 96px;
+height: 3px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Step 1: Inactive */
+
+width: 28px;
+height: 3px;
+
+background: #E5E0D6;
+border-radius: 9999px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Step 2: Inactive */
+
+width: 28px;
+height: 3px;
+
+background: #E5E0D6;
+border-radius: 9999px;
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Step 3: Active (Muted Sage/Olive) */
+
+width: 28px;
+height: 3px;
+
+background: #5D6B52;
+border-radius: 9999px;
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;

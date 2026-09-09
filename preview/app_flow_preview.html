@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WARDROBE - Complete Connected App Flow</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+    body {
+      background: #121110;
+      color: #E5E0D6;
+      font-family: 'Inter', -apple-system, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 30px 16px;
+    }
+    .flow-nav {
+      max-width: 900px;
+      width: 100%;
+      margin-bottom: 24px;
+      text-align: center;
+    }
+    .flow-title {
+      font-family: 'Bodoni Moda', serif;
+      font-size: 26px;
+      color: #FBF9F5;
+      letter-spacing: 0.05em;
+      margin-bottom: 8px;
+    }
+    .flow-subtitle {
+      font-size: 13px;
+      color: #A8A29E;
+      margin-bottom: 16px;
+    }
+    .step-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    .step-btn {
+      background: #1C1A18;
+      border: 1px solid #383531;
+      color: #D6D3D1;
+      padding: 6px 14px;
+      border-radius: 9999px;
+      font-size: 12px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .step-btn.active {
+      background: #7D8B72;
+      border-color: #7D8B72;
+      color: #FFFFFF;
+      box-shadow: 0 4px 12px rgba(125, 139, 114, 0.35);
+    }
+    .step-btn:hover:not(.active) {
+      background: #2A2724;
+      border-color: #57534E;
+    }
+    .device-shell {
+      position: relative;
+      width: 390px;
+      height: 844px;
+      background: #FBF9F5;
+      border-radius: 46px;
+      overflow: hidden;
+      box-shadow: 0 25px 60px rgba(0,0,0,0.55), 0 0 0 8px #22201D;
+    }
+    .device-iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      transition: opacity 0.25s ease;
+    }
+    .nav-controls {
+      display: flex;
+      gap: 12px;
+      margin-top: 18px;
+    }
+    .ctrl-btn {
+      background: #242220;
+      border: 1px solid #44403C;
+      color: #F5F5F4;
+      padding: 8px 18px;
+      border-radius: 8px;
+      font-size: 13px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.15s ease;
+    }
+    .ctrl-btn:hover {
+      background: #322F2B;
+      border-color: #78716C;
+    }
+  </style>
+</head>
+<body>
+  <div class="flow-nav">
+    <div class="flow-title">WARDROBE Complete Flow Router</div>
+    <div class="flow-subtitle">Native Jetpack Compose Architecture Wired via <code>WardrobeApp()</code> in <code>MainActivity.kt</code></div>
+    <div class="step-badges">
+      <button class="step-btn active" onclick="goTo('opening_screen_preview.html', 0)">01. Opening</button>
+      <button class="step-btn" onclick="goTo('onboarding_02_preview.html', 1)">02. Style AI</button>
+      <button class="step-btn" onclick="goTo('onboarding_03_preview.html', 2)">03. Occasions</button>
+      <button class="step-btn" onclick="goTo('create_account_preview.html', 3)">04. Create Account</button>
+      <button class="step-btn" onclick="goTo('sign_in_preview.html', 4)">05. Sign In</button>
+      <button class="step-btn" onclick="goTo('email_signup_preview.html', 5)">06. Email Sign Up</button>
+      <button class="step-btn" onclick="goTo('email_signin_preview.html', 6)">07. Email Sign In</button>
+      <button class="step-btn" onclick="goTo('understand_your_face_preview.html', 7)">08. Understand Face</button>
+      <button class="step-btn" onclick="goTo('face_capture_preview.html', 8)">09. Face Capture</button>
+      <button class="step-btn" onclick="goTo('full_body_capture_preview.html', 9)">10. Full Body Capture</button>
+    </div>
+  </div>
+
+  <div class="device-shell">
+    <iframe id="flowFrame" class="device-iframe" src="opening_screen_preview.html"></iframe>
+  </div>
+
+  <div class="nav-controls">
+    <button class="ctrl-btn" onclick="navigateStep(-1)">← Previous Screen</button>
+    <button class="ctrl-btn" onclick="navigateStep(1)">Next Screen →</button>
+  </div>
+
+  <script>
+    const screens = [
+      'opening_screen_preview.html',
+      'onboarding_02_preview.html',
+      'onboarding_03_preview.html',
+      'create_account_preview.html',
+      'sign_in_preview.html',
+      'email_signup_preview.html',
+      'email_signin_preview.html',
+      'understand_your_face_preview.html',
+      'face_capture_preview.html',
+      'full_body_capture_preview.html'
+    ];
+    let currentIndex = 0;
+    const frame = document.getElementById('flowFrame');
+    const buttons = document.querySelectorAll('.step-btn');
+
+    function goTo(src, index) {
+      currentIndex = index;
+      frame.style.opacity = '0';
+      setTimeout(() => {
+        frame.src = src;
+        frame.onload = () => { frame.style.opacity = '1'; };
+      }, 150);
+      buttons.forEach((b, i) => {
+        b.classList.toggle('active', i === index);
+      });
+    }
+
+    function navigateStep(direction) {
+      let nextIndex = currentIndex + direction;
+      if (nextIndex < 0) nextIndex = screens.length - 1;
+      if (nextIndex >= screens.length) nextIndex = 0;
+      goTo(screens[nextIndex], nextIndex);
+    }
+  </script>
+</body>
+</html>

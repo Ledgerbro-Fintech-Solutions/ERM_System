@@ -1,0 +1,1769 @@
+/* WARDROBE - Understand Your Face */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: flex-start;
+padding: 0px;
+
+position: relative;
+width: 390px;
+height: 858px;
+
+background: linear-gradient(0deg, #FBF9F5, #FBF9F5), linear-gradient(0deg, #FBF9F5, #FBF9F5), #FFFFFF;
+
+
+/* HeroVisualSection */
+
+width: 390px;
+height: 510px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Primary Model Photography */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+padding: 0px;
+isolation: isolate;
+
+position: absolute;
+left: 0px;
+right: 0px;
+top: 0px;
+bottom: 0px;
+
+
+
+/* High-end fashion editorial portrait of Asian female model */
+
+width: 390px;
+height: 510px;
+
+background: url(.jpg);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 1;
+z-index: 0;
+
+
+/* Badge 1: Face Shape */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+padding: 8px 10px;
+gap: 12.36px;
+isolation: isolate;
+
+position: absolute;
+height: 43.75px;
+left: 16px;
+right: 246px;
+top: 23px;
+
+background: rgba(247, 244, 238, 0.82);
+border: 1px solid rgba(255, 255, 255, 0.7);
+backdrop-filter: blur(6px);
+/* Note: backdrop-filter has minimal browser support */
+border-radius: 12px;
+
+
+/* Badge 1: Face Shape:shadow */
+
+position: absolute;
+left: 0px;
+right: 0px;
+top: 0px;
+bottom: -0.25px;
+
+background: rgba(255, 255, 255, 0.002);
+box-shadow: 0px 4px 20px -2px rgba(26, 23, 21, 0.05), 0px 2px 6px -1px rgba(26, 23, 21, 0.03);
+border-radius: 12px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+z-index: 0;
+
+
+/* Container */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 8px;
+
+width: 81.64px;
+height: 25.75px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+z-index: 1;
+
+
+/* Stylized face shape icon */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 0px;
+
+width: 24px;
+height: 24px;
+
+background: rgba(255, 255, 255, 0.6);
+border-radius: 9999px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* SVG */
+
+width: 14px;
+height: 16px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Vector */
+
+position: absolute;
+left: 15.08%;
+right: 15.08%;
+top: 8.33%;
+bottom: 8.33%;
+
+border: 1.06667px solid #1A1715;
+
+
+/* Vector */
+
+position: absolute;
+left: 40.48%;
+right: 40.41%;
+top: 44.45%;
+bottom: 33.61%;
+
+border: 1.06667px solid #1A1715;
+
+
+/* Container */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 49.64px;
+height: 25.75px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Container */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 49.64px;
+height: 12px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+margin: -1px 0px;
+
+
+/* Text */
+
+width: 49.64px;
+height: 12px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 7.5px;
+line-height: 11px;
+/* identical to box height, or 150% */
+display: flex;
+align-items: center;
+letter-spacing: 0.375px;
+text-transform: uppercase;
+
+color: #78716C;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Container */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px 0px 0.75px;
+
+width: 49.64px;
+height: 14.75px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Text */
+
+width: 23.7px;
+height: 14px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 11px;
+line-height: 14px;
+/* identical to box height, or 125% */
+display: flex;
+align-items: center;
+
+color: #1A1715;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* SVG - Chevron */
+
+width: 12px;
+height: 12px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+z-index: 2;
+
+
+/* Vector */
+
+position: absolute;
+left: 37.5%;
+right: 33.33%;
+top: 20.83%;
+bottom: 20.83%;
+
+border: 1px solid #A8A29E;
+
+
+/* Badge 2: Skin Tone */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+padding: 8px 10px;
+gap: 1.62px;
+isolation: isolate;
+
+position: absolute;
+height: 43.75px;
+left: 18px;
+right: 244px;
+top: 77px;
+
+background: rgba(247, 244, 238, 0.82);
+border: 1px solid rgba(255, 255, 255, 0.7);
+backdrop-filter: blur(6px);
+/* Note: backdrop-filter has minimal browser support */
+border-radius: 12px;
+
+
+/* Badge 2: Skin Tone:shadow */
+
+position: absolute;
+left: 0px;
+right: 0px;
+top: 0px;
+bottom: -0.25px;
+
+background: rgba(255, 255, 255, 0.002);
+box-shadow: 0px 4px 20px -2px rgba(26, 23, 21, 0.05), 0px 2px 6px -1px rgba(26, 23, 21, 0.03);
+border-radius: 12px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+z-index: 0;
+
+
+/* Container */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 8px;
+
+width: 92.38px;
+height: 25.75px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+z-index: 1;
+
+
+/* Skin tone icon */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 0px;
+
+width: 24px;
+height: 24px;
+
+background: rgba(255, 255, 255, 0.6);
+border-radius: 9999px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* SVG */
+
+width: 14px;
+height: 14px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Vector */
+
+position: absolute;
+left: 12.5%;
+right: 12.5%;
+top: 12.5%;
+bottom: 12.5%;
+
+border: 1.05px dashed #1A1715;
+
+
+/* Vector */
+
+position: absolute;
+left: 28.12%;
+right: 28.12%;
+top: 28.12%;
+bottom: 28.12%;
+
+background: #E8D9C8;
+border: 1.05px solid #1A1715;
+
+
+/* Container */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 60.38px;
+height: 25.75px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Container */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 60.38px;
+height: 12px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+margin: -1px 0px;
+
+
+/* Text */
+
+width: 43.72px;
+height: 12px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 7.5px;
+line-height: 11px;
+/* identical to box height, or 150% */
+display: flex;
+align-items: center;
+letter-spacing: 0.375px;
+text-transform: uppercase;
+
+color: #78716C;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Container */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px 0px 0.75px;
+
+width: 60.38px;
+height: 14.75px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Text */
+
+width: 60.38px;
+height: 14px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 11px;
+line-height: 14px;
+/* identical to box height, or 125% */
+display: flex;
+align-items: center;
+
+color: #1A1715;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* SVG */
+
+width: 12px;
+height: 12px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+z-index: 2;
+
+
+/* Vector */
+
+position: absolute;
+left: 37.5%;
+right: 33.33%;
+top: 20.83%;
+bottom: 20.83%;
+
+border: 1px solid #A8A29E;
+
+
+/* Soft gradient blend at bottom to transition seamlessly into editorial section */
+
+position: absolute;
+height: 112px;
+left: 0px;
+right: 0px;
+bottom: 0px;
+
+background: linear-gradient(0deg, #FBF9F5 0%, rgba(251, 249, 245, 0.6) 50%, rgba(251, 249, 245, 0) 100%);
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+z-index: 1;
+
+
+/* Facial Analysis Delicate Framing Brackets & Ticks */
+
+position: absolute;
+width: 148px;
+height: 178px;
+left: calc(50% - 148px/2);
+top: 144px;
+
+
+
+/* Center dashed crosshair axes */
+
+box-sizing: border-box;
+
+position: absolute;
+height: 1px;
+left: 0px;
+right: 0px;
+top: 88.5px;
+
+border-top: 1px dashed rgba(255, 255, 255, 0.5);
+
+
+/* Vertical Divider */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 1px;
+left: 73.5px;
+top: 0px;
+bottom: 0px;
+
+border-left: 1px dashed rgba(255, 255, 255, 0.5);
+
+
+/* Top Left Corner Bracket */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 16px;
+height: 16px;
+left: 0px;
+top: 0px;
+
+border-width: 1px 0px 0px 1px;
+border-style: solid;
+border-color: rgba(255, 255, 255, 0.9);
+border-radius: 3px 0px 0px 0px;
+
+
+/* Top Right Corner Bracket */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 16px;
+height: 16px;
+right: 0px;
+top: 0px;
+
+border-width: 1px 1px 0px 0px;
+border-style: solid;
+border-color: rgba(255, 255, 255, 0.9);
+border-radius: 0px 3px 0px 0px;
+
+
+/* Bottom Left Corner Bracket */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 16px;
+height: 16px;
+left: 0px;
+bottom: 0px;
+
+border-width: 0px 0px 1px 1px;
+border-style: solid;
+border-color: rgba(255, 255, 255, 0.9);
+border-radius: 0px 0px 0px 3px;
+
+
+/* Bottom Right Corner Bracket */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 16px;
+height: 16px;
+right: 0px;
+bottom: 0px;
+
+border-width: 0px 1px 1px 0px;
+border-style: solid;
+border-color: rgba(255, 255, 255, 0.9);
+border-radius: 0px 0px 3px 0px;
+
+
+/* Right Floating Analysis Attribute Badges */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 10px;
+
+position: absolute;
+width: 128px;
+height: 111.25px;
+right: 9px;
+top: 81px;
+
+
+
+/* Badge 3: Undertone */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+padding: 8px 10px;
+gap: 11.98px;
+isolation: isolate;
+
+width: 128px;
+height: 43.75px;
+
+background: rgba(247, 244, 238, 0.82);
+border: 1px solid rgba(255, 255, 255, 0.7);
+backdrop-filter: blur(6px);
+/* Note: backdrop-filter has minimal browser support */
+border-radius: 12px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Badge 3: Undertone:shadow */
+
+position: absolute;
+left: 0px;
+right: 0px;
+top: 0px;
+bottom: -0.25px;
+
+background: rgba(255, 255, 255, 0.002);
+box-shadow: 0px 4px 20px -2px rgba(26, 23, 21, 0.05), 0px 2px 6px -1px rgba(26, 23, 21, 0.03);
+border-radius: 12px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+z-index: 0;
+
+
+/* Container */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 8px;
+
+width: 82.02px;
+height: 25.75px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+z-index: 1;
+
+
+/* Radial dots undertone icon */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 0px;
+
+width: 24px;
+height: 24px;
+
+background: rgba(255, 255, 255, 0.6);
+border-radius: 9999px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* SVG */
+
+width: 14px;
+height: 14px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Vector */
+
+position: absolute;
+left: 43.13%;
+right: 43.12%;
+top: 5.63%;
+bottom: 80.62%;
+
+background: #8C7D6B;
+
+
+/* Vector */
+
+position: absolute;
+left: 69.37%;
+right: 16.88%;
+top: 16.87%;
+bottom: 69.38%;
+
+background: #8C7D6B;
+
+
+/* Vector */
+
+position: absolute;
+left: 80.63%;
+right: 5.62%;
+top: 43.13%;
+bottom: 43.12%;
+
+background: #8C7D6B;
+
+
+/* Vector */
+
+position: absolute;
+left: 69.37%;
+right: 16.88%;
+top: 69.37%;
+bottom: 16.88%;
+
+background: #8C7D6B;
+
+
+/* Vector */
+
+position: absolute;
+left: 43.13%;
+right: 43.12%;
+top: 80.63%;
+bottom: 5.62%;
+
+background: #8C7D6B;
+
+
+/* Vector */
+
+position: absolute;
+left: 16.88%;
+right: 69.37%;
+top: 69.37%;
+bottom: 16.88%;
+
+background: #8C7D6B;
+
+
+/* Vector */
+
+position: absolute;
+left: 5.63%;
+right: 80.62%;
+top: 43.13%;
+bottom: 43.12%;
+
+background: #8C7D6B;
+
+
+/* Vector */
+
+position: absolute;
+left: 16.88%;
+right: 69.37%;
+top: 16.87%;
+bottom: 69.38%;
+
+background: #8C7D6B;
+
+
+/* Container */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 50.02px;
+height: 25.75px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Container */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 50.02px;
+height: 12px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+margin: -1px 0px;
+
+
+/* Text */
+
+width: 50.02px;
+height: 12px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 7.5px;
+line-height: 11px;
+/* identical to box height, or 150% */
+display: flex;
+align-items: center;
+letter-spacing: 0.375px;
+text-transform: uppercase;
+
+color: #78716C;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Container */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px 0px 0.75px;
+
+width: 50.02px;
+height: 14.75px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Text */
+
+width: 30.88px;
+height: 14px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 11px;
+line-height: 14px;
+/* identical to box height, or 125% */
+display: flex;
+align-items: center;
+
+color: #1A1715;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* SVG */
+
+width: 12px;
+height: 12px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+z-index: 2;
+
+
+/* Vector */
+
+position: absolute;
+left: 37.5%;
+right: 33.33%;
+top: 20.83%;
+bottom: 20.83%;
+
+border: 1px solid #A8A29E;
+
+
+/* Badge 4: Best Colors */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+padding: 8px 10px;
+isolation: isolate;
+
+width: 128px;
+height: 57.5px;
+
+background: rgba(247, 244, 238, 0.82);
+border: 1px solid rgba(255, 255, 255, 0.7);
+backdrop-filter: blur(6px);
+/* Note: backdrop-filter has minimal browser support */
+border-radius: 12px;
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Badge 4: Best Colors:shadow */
+
+position: absolute;
+left: 0px;
+right: 0px;
+top: 0px;
+bottom: -0.25px;
+
+background: rgba(255, 255, 255, 0.002);
+box-shadow: 0px 4px 20px -2px rgba(26, 23, 21, 0.05), 0px 2px 6px -1px rgba(26, 23, 21, 0.03);
+border-radius: 12px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+z-index: 0;
+
+
+/* Container */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 8px;
+
+width: 88.02px;
+height: 39.5px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+z-index: 1;
+
+
+/* Swatches cluster */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 0px;
+
+width: 24px;
+height: 24px;
+
+background: rgba(255, 255, 255, 0.6);
+border-radius: 9999px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Container */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+
+width: 18px;
+height: 10px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Background */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+padding: 0px;
+
+width: 10px;
+height: 10px;
+
+background: #B2704E;
+border-radius: 9999px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 0px -6px;
+
+
+/* Overlay+Shadow */
+
+width: 10px;
+height: 10px;
+
+background: rgba(255, 255, 255, 0.002);
+box-shadow: 0px 0px 0px 1px #FFFFFF;
+border-radius: 9999px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Margin */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 10px;
+height: 10px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+margin: 0px -6px;
+
+
+/* Background */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+padding: 0px;
+
+width: 10px;
+height: 10px;
+
+background: #C49A6C;
+border-radius: 9999px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Overlay+Shadow */
+
+width: 10px;
+height: 10px;
+
+background: rgba(255, 255, 255, 0.002);
+box-shadow: 0px 0px 0px 1px #FFFFFF;
+border-radius: 9999px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Margin */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 10px;
+height: 10px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* Background */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+padding: 0px;
+
+width: 10px;
+height: 10px;
+
+background: #7D8B72;
+border-radius: 9999px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Overlay+Shadow */
+
+width: 10px;
+height: 10px;
+
+background: rgba(255, 255, 255, 0.002);
+box-shadow: 0px 0px 0px 1px #FFFFFF;
+border-radius: 9999px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Container */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 56.02px;
+height: 39.5px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Container */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 56.02px;
+height: 12px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+margin: -1.125px 0px;
+
+
+/* Text */
+
+width: 56.02px;
+height: 12px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 7.5px;
+line-height: 11px;
+/* identical to box height, or 150% */
+display: flex;
+align-items: center;
+letter-spacing: 0.375px;
+text-transform: uppercase;
+
+color: #78716C;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Container */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px 0px 0.625px;
+
+width: 56.02px;
+height: 28.62px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Text */
+
+width: 31.97px;
+height: 28px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 11px;
+line-height: 14px;
+/* or 125% */
+display: flex;
+align-items: center;
+
+color: #1A1715;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* SVG */
+
+width: 11.94px;
+height: 12px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+z-index: 2;
+
+
+/* Vector */
+
+position: absolute;
+left: 37.5%;
+right: 33.33%;
+top: 20.98%;
+bottom: 20.98%;
+
+border: 0.995px solid #A8A29E;
+
+
+/* EditorialContentSection */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: center;
+padding: 4px 24px 24px;
+
+width: 390px;
+height: 348px;
+
+background: #FBF9F5;
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 1;
+
+
+/* Typography Block */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 7.36px 0px 0px;
+gap: 0px;
+
+width: 270px;
+height: 148.36px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Heading 1 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 0px;
+
+width: 177.39px;
+height: 74px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Text */
+
+width: 177.39px;
+height: 74px;
+
+font-family: 'Bodoni Moda';
+font-style: normal;
+font-weight: 400;
+font-size: 34px;
+line-height: 37px;
+/* or 108% */
+display: flex;
+align-items: center;
+text-align: center;
+letter-spacing: -0.34px;
+
+color: #1A1715;
+font-variation-settings: 'opsz' 34;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Margin */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 11px 0px 0px;
+
+width: 270px;
+max-width: 270px;
+height: 67px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Container */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 0px 0.59px 0px 0.58px;
+
+width: 270px;
+max-width: 270px;
+height: 56px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Text */
+
+width: 268.83px;
+height: 56px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 12.5px;
+line-height: 18px;
+/* or 148% */
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #78716C;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Circular Stylist Emblem & Subtitle:margin */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+padding: 25.5312px 0px;
+
+width: 235.73px;
+height: 171.64px;
+min-height: 74.75px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 1;
+
+
+/* Circular Stylist Emblem & Subtitle */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 4px 0px 0px;
+isolation: isolate;
+
+width: 235.73px;
+height: 75px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Overlay+Border */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 0px;
+isolation: isolate;
+
+width: 48px;
+height: 48px;
+
+background: rgba(255, 255, 255, 0.3);
+border: 1px solid rgba(214, 206, 190, 0.6);
+border-radius: 9999px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+z-index: 1;
+
+
+/* SVG - Elegant Line Face Outline */
+
+width: 24px;
+height: 24px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+z-index: 0;
+
+
+/* Vector */
+
+position: absolute;
+left: 29.17%;
+right: 29.17%;
+top: 8.33%;
+bottom: 22.92%;
+
+border: 1.2px solid #7D8B72;
+
+
+/* Vector */
+
+position: absolute;
+left: 41.67%;
+right: 41.62%;
+top: 35.42%;
+bottom: 37.71%;
+
+border: 1.2px solid #7D8B72;
+
+
+/* Subtle outer crosshair ticks */
+
+position: absolute;
+width: 1px;
+height: 8px;
+left: 23.5px;
+top: -3px;
+
+background: #D6CEBE;
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+z-index: 1;
+
+
+/* Vertical Divider */
+
+position: absolute;
+width: 1px;
+height: 8px;
+left: 23.5px;
+bottom: -3px;
+
+background: #D6CEBE;
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+z-index: 2;
+
+
+/* Horizontal Divider */
+
+position: absolute;
+width: 8px;
+height: 1px;
+left: -3px;
+top: 23.5px;
+
+background: #D6CEBE;
+
+/* Inside auto layout */
+flex: none;
+order: 3;
+flex-grow: 0;
+z-index: 3;
+
+
+/* Horizontal Divider */
+
+position: absolute;
+width: 8px;
+height: 1px;
+right: -3px;
+top: 23.5px;
+
+background: #D6CEBE;
+
+/* Inside auto layout */
+flex: none;
+order: 4;
+flex-grow: 0;
+z-index: 4;
+
+
+/* Margin */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 10px 0px 0px;
+
+width: 235.73px;
+height: 23px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+z-index: 0;
+
+
+/* Container */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 0px;
+
+width: 235.73px;
+height: 13px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Text */
+
+width: 235.73px;
+height: 13px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 8.5px;
+line-height: 13px;
+/* identical to box height, or 150% */
+display: flex;
+align-items: center;
+text-align: center;
+letter-spacing: 2.04px;
+text-transform: uppercase;
+
+color: #7D8B72;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;

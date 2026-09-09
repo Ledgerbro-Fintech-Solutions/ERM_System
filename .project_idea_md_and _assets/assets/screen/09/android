@@ -1,0 +1,31 @@
+<RelativeLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+android:id="@+id/wardrobe_ho"
+android:layout_width="390dp"
+android:layout_height="1431.44dp"
+android:background="@drawable/wardrobe_ho"
+ />
+
+<!-- drawable/wardrobe_ho.xml -->
+<vector
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:aapt="http://schemas.android.com/aapt"
+android:width="390dp"
+android:height="1431.44dp"
+android:viewportWidth="390"
+android:viewportHeight="1431.44"
+ >
+<group>
+<clip-path
+android:pathData="M0 0H390V1431.44H0V0Z"
+/>
+<path
+android:pathData="M0 0V1431.44H390V0"
+android:fillColor="#FFFFFF"
+/>
+<path
+android:pathData="M0 0V1431.44H390V0"
+android:fillColor="#FBF9F5"
+/>
+</group>
+</vector>
